@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const IndexPage = () => (
   <div>
     <header>
-      <h1>Welcome to My Gatsby Site!</h1>
+      <h1>Welcome to My Gatsby</h1>
       <p>This is a simple static site built with Gatsby.</p>
     </header>
     <main>
