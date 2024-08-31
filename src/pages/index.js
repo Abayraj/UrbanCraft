@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 // import './index.css'; // Optional: Import a CSS file for styling
+import Nav from '../components/Navbar/nav'
 
 const IndexPage = () => (
   <div>
     <header>
+     <Nav/>
       <h1>Welcome to My Gatsby</h1>
       <p>This is a simple static site built with Gatsby.</p>
     </header>
