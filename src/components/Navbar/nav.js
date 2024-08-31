@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import './nav.css';
+import Logo from '/src/images/urban-craft-logo.png';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className='logo-container'>
-        <img src='/asset/images/Logo/urbancraft_logo.png' alt='logo' />
+        <img src={Logo} alt="Urban Craft Logo" />
       </div>
       
       {/* Show the hamburger menu only on small screens */}
