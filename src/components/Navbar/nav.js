@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className='logo-container'>
-        <img src='/images/Logo/urbancraft_logo.png' alt='logo' />
+        <img src='/static/images/Logo/urbancraft_logo.png' alt='logo' />
       </div>
       
       {/* Show the hamburger menu only on small screens */}
