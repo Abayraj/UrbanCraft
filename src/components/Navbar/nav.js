@@ -13,9 +13,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className='logo-container'>
-        <img src={Logo} alt="Urban Craft Logo" />
-      </div>
+      
+        <img className='logo-img' src={Logo} alt="Urban Craft Logo" />
+   
       
       {/* Show the hamburger menu only on small screens */}
       <button className='hamburger-menu' onClick={toggleMenu}>
