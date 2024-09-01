@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Nav from '../components/Navbar/nav';
 import { motion } from 'framer-motion';
 import './index.css';
-import FirstImage from "/public/static/view-water-tank-storage.jpg";
+import FirstImage from "/src/asset/images/view-water-tank-storage.jpg";
 import NextIcon from '/public/icons/arrow_forward_icon (1).svg';
 import PrevIcon from '/public/icons/arrow_backward_icon (2).svg';
 const slides = [
@@ -45,10 +45,10 @@ const IndexPage = () => {
   const handleNext = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
-  // useEffect(() => {
-  //   const interval = setInterval(handleNext, 4000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(handleNext, 6000);
+    return () => clearInterval(interval);
+  }, []);
 
   const slide = slides[currentSlide];
 
@@ -70,7 +70,7 @@ const IndexPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 2, ease: 'easeIn' }}
             style={{
               backgroundImage: `url(${slide.image})`,
           
