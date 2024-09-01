@@ -4,8 +4,11 @@ import Nav from '../components/Navbar/nav';
 import { motion } from 'framer-motion';
 import './index.css';
 import FirstImage from "/src/asset/images/view-water-tank-storage.jpg";
+import SecondImage from '/src/asset/images/close-up-two-male-architect-s-hand-blueprint.jpg'
+import ThirdImage from '/src/asset/images/architect_image.jpg'
 import NextIcon from '/src/asset/images/arrow_forward_icon.svg';
 import PrevIcon from '/src/asset/images/arrow_backward_icon.svg';
+
 const slides = [
   { 
     id: 1, 
@@ -19,7 +22,7 @@ const slides = [
   },
   { 
     id: 2, 
-    image:'', 
+    image:SecondImage, 
     text: (
       <>
         Elevate your business with our expertly crafted commercial spaces.<br />
@@ -29,7 +32,7 @@ const slides = [
   },
   { 
     id: 3, 
-    image: '', 
+    image:ThirdImage, 
     text: (
       <>
         Revitalize your space with our renovation services.<br />
