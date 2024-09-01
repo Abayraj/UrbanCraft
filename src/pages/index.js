@@ -4,8 +4,8 @@ import Nav from '../components/Navbar/nav';
 import { motion } from 'framer-motion';
 import './index.css';
 import FirstImage from "/src/asset/images/view-water-tank-storage.jpg";
-import NextIcon from '/public/icons/arrow_forward_icon (1).svg';
-import PrevIcon from '/public/icons/arrow_backward_icon (2).svg';
+import NextIcon from '/public/icons/arrow_forward_icon.svg';
+import PrevIcon from '/public/icons/arrow_backward_icon.svg';
 const slides = [
   { 
     id: 1, 
