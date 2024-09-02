@@ -8,15 +8,15 @@ import SecondImage from '/src/asset/images/close-up-two-male-architect-s-hand-bl
 import ThirdImage from '/src/asset/images/architect_image.jpg'
 import NextIcon from '/src/asset/images/arrow_forward_icon.svg';
 import PrevIcon from '/src/asset/images/arrow_backward_icon.svg';
-
+import CustomCursor from '../components/CustomCursor/CustomCursor';
 const slides = [
   { 
     id: 1, 
     image: FirstImage, 
     text: (
       <>
-        Your imagination is the limit<br />
-        let’s build something extraordinary<br /> together
+        Your imagination is the limit
+        let’s build something extraordinary together
       </>
     ) 
   },
@@ -25,8 +25,7 @@ const slides = [
     image:SecondImage, 
     text: (
       <>
-        Elevate your business with our expertly crafted commercial spaces.<br />
-        Discover the difference of quality construction.
+    Elevate your space with our premier commercial builds. Quality you can trust.
       </>
     )
   },
@@ -35,8 +34,7 @@ const slides = [
     image:ThirdImage, 
     text: (
       <>
-        Revitalize your space with our renovation services.<br />
-        See how we transform the old into the new.
+     Refresh your space with our renovations. Watch us turn the old into new.
       </>
     )
   }
@@ -79,14 +77,14 @@ const IndexPage = () => {
           
             }}
           >
-            <motion.div
+            <motion.p
               className="slide-text"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
               {slide.text}
-            </motion.div>
+            </motion.p>
           </motion.div>
 
           <button onClick={handleNext} className="next-btn">
@@ -103,6 +101,8 @@ const IndexPage = () => {
       <footer>
         <p>&copy; 2024 My Gatsby Site. All rights reserved.</p>
       </footer>
+      <CustomCursor/>
+
     </div>
   );
 };

@@ -1,0 +1,49 @@
+.cursor {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    background: #fff9f9; /* Set a color for the cursor */
+    pointer-events: none;
+    z-index: 111;
+    border: 1px solid #000;
+    transition: all 0.2s ease-out;
+    animation: moveCursor1 0.5s infinite alternate;
+  }
+  
+  .expand {
+    background: #000; /* Ensure this matches or is intended */
+    animation: moveCursor2 0.5s forwards;
+    border: 1px solid #000;
+  }
+  
+  @keyframes moveCursor1 {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(0.8);
+    }
+  }
+  
+  @keyframes moveCursor2 {
+    0% {
+      transform: scale(1);
+      opacity: 1; /* Ensure opacity starts at 1 */
+    }
+  
+    50% {
+      transform: scale(2);
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
