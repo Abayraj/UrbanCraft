@@ -1,140 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --mouse-x: 0;
+  --mouse-y: 0;
+}
+
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 .header-wrapper-second-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0px 40px;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 40px;
+  box-sizing: border-box;
 }
 
 .header-wrapper-second-section h2 {
-    font-size: 2.7rem;
-    font-weight: 600;
+  font-size: 2.7rem;
+  font-weight: 600;
 }
 
 .header-wrapper-second-section p {
-    font-size: 1.3rem;
-    width: 600px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    word-wrap: break-word; /* Break long words onto the next line */
-    overflow-wrap: break-word; /* Break long words to prevent overflow */
+  font-size: 1.3rem;
+  width: 600px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words onto the next line */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 14px;
-    column-gap: 10px;
-    padding: 0px 20px 10px 20px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 14px;
+  column-gap: 10px;
+  padding: 0px 20px 10px 20px;
+  box-sizing: border-box;
 }
 
 .card {
-    max-width: 390px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+  max-width: 390px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: 0.1s;
+  perspective: 1000px; /* Add perspective to enable 3D effect */
+}
+
+.card-black {
+  box-sizing: border-box;
+  width: 100%;
+  height: 160px;
+  border-radius: 20px 20px 0 0;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .card img {
-    max-width: 100%; /* Ensure image scales down with its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    margin: 0;
-    width: 500px;
-    height: 240px;
+  max-width: 100%; /* Ensure image scales down with its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  width: 500px;
+  height: 240px;
 }
 
 .card p {
-    margin: 0;
-    padding: 0;
-    word-wrap: break-word; /* Break long words onto the next line */
-    overflow-wrap: break-word; /* Break long words to prevent overflow */
-    text-align: center; /* Center-align the text if needed */
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+  text-align:left; /* Center-align the text if needed */
+  font-family: "Poppins";
+  font-weight: 400;
 }
 
 .img-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .img-container figcaption {
-    border-radius: 12px;
-    background: #30b141;
-    width: 90%;
-    height: 65px;
-    padding: 6px;
-    color: white;
-    font-size: 1.75rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+  border-radius: 12px;
+  background: #30b141;
+  width: 90%;
+  height: 65px;
+  padding: 6px;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.05) perspective(900px) rotateY(calc(var(--mouse-x) * 100deg)) rotateX(calc(var(--mouse-y) * -100deg));
+  box-shadow: calc(var(--mouse-x) * -30px) calc(var(--mouse-y) * -30px) 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr;
-    }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr;
-    }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .header-wrapper-second-section p {
-        font-size: 1.1rem; /* Adjust font size */
-        width: auto; /* Allow text to wrap properly */
-    }
+  .header-wrapper-second-section p {
+    font-size: 1.1rem; /* Adjust font size */
+    width: auto; /* Allow text to wrap properly */
+  }
 }
 
 @media (max-width: 426px) {
-    .card-container {
-        grid-template-columns: 1fr; /* Stack cards vertically on very small screens */
-    }
+  .card-container {
+    grid-template-columns: 1fr; /* Stack cards vertically on very small screens */
+  }
 
-    .header-wrapper-second-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+  .header-wrapper-second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
 
-    .header-wrapper-second-section p {
-        font-size: 1rem; /* Adjust font size */
-        width: auto; /* Allow text to wrap properly */
-    }
+  .header-wrapper-second-section p {
+    font-size: 1rem; /* Adjust font size */
+    width: auto; /* Allow text to wrap properly */
+  }
 
-    .header-wrapper-second-section h2 {
-        font-size: 2.5rem; /* Adjust font size */
-    }
+  .header-wrapper-second-section h2 {
+    font-size: 2.5rem; /* Adjust font size */
+  }
 }
 
