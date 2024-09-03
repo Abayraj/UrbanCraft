@@ -38,23 +38,22 @@ body {
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 14px;
-  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0px 20px 10px 20px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .card {
-  max-width: 390px;
+  width: 80rem;
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 13px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
