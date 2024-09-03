@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
 import Nav from '../components/Navbar/nav';
+import SecondSection from '../components/SectionSecond/Secondsection'
 import { motion } from 'framer-motion';
 import './index.css';
 import FirstImage from "/src/asset/images/view-water-tank-storage.jpg";
@@ -46,10 +46,10 @@ const IndexPage = () => {
   const handleNext = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
-  useEffect(() => {
-    const interval = setInterval(handleNext, 6000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(handleNext, 6000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const slide = slides[currentSlide];
 
@@ -91,12 +91,7 @@ const IndexPage = () => {
             <img src={NextIcon} alt='next' />
           </button>
         </section>
-
-        <section>
-          <h2>Contact</h2>
-          <p>Get in touch with us for more information.</p>
-          <Link to="/contact">Contact Us</Link>
-        </section>
+        <SecondSection/>
       </main>
       <footer>
         <p>&copy; 2024 My Gatsby Site. All rights reserved.</p>
