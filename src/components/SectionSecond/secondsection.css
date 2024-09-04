@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
+/* :root {
   --mouse-x: 0;
   --mouse-y: 0;
-}
+} */
 
 /* General Styles */
 body {
@@ -15,59 +15,61 @@ body {
 
 .header-wrapper-second-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 0px 40px;
+  justify-content: center;
+  padding: 20px 40px;
   box-sizing: border-box;
 }
 
 .header-wrapper-second-section h2 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  text-align: center; /* Center align heading text */
 }
 
 .header-wrapper-second-section p {
   font-size: 1.3rem;
-  width: 600px;
+  width: 90%; /* Allow text to wrap and fit within the screen */
+  max-width: 800px; /* Limit the maximum width of the paragraph */
   font-weight: 500;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  text-align: center; /* Center-align text */
   word-wrap: break-word; /* Break long words onto the next line */
   overflow-wrap: break-word; /* Break long words to prevent overflow */
 }
 
 .card-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 0px 20px 10px 20px;
+  padding: 20px;
   box-sizing: border-box;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between cards */
   width: 100%;
 }
 
 .card {
-  width: 80rem;
+  width: 100%;
+  max-width: 80rem; /* Ensure card does not grow too large */
   background: white;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 13px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   transition: 0.1s;
-  perspective: 1000px; /* Add perspective to enable 3D effect */
-}
-
-.card-black {
-  box-sizing: border-box;
-  width: 100%;
-  height: 160px;
-  border-radius: 20px 20px 0 0;
-  background-color: #000000;
-  color: #FFFFFF;
 }
 
 .card img {
@@ -75,34 +77,33 @@ body {
   height: auto; /* Maintain aspect ratio */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 0;
-  margin: 0;
-  width: 500px;
-  height: 240px;
+  margin-bottom: 10px; /* Space between image and text */
 }
 
 .card p {
   margin: 0;
   padding: 0;
   overflow-wrap: break-word; /* Break long words to prevent overflow */
-  text-align:left; /* Center-align the text if needed */
-  font-family: "Poppins";
-  font-weight: 400;
+  text-align: center; /* Center-align text for better readability */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.9rem;
 }
 
-.img-container {
+.card figure{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
 }
 
-.img-container figcaption {
+
+.card figcaption {
   border-radius: 12px;
   background: #30b141;
   width: 90%;
-  height: 65px;
+  height: 55px;
   padding: 6px;
   color: white;
   font-size: 1.75rem;
@@ -113,49 +114,59 @@ body {
   box-sizing: border-box;
 }
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.05) perspective(900px) rotateY(calc(var(--mouse-x) * 100deg)) rotateX(calc(var(--mouse-y) * -100deg));
   box-shadow: calc(var(--mouse-x) * -30px) calc(var(--mouse-y) * -30px) 6px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .card-container {
-    grid-template-columns: 1fr 1fr;
+    /* Adjust card layout for medium screens if necessary */
+  }
+
+  .card {
+    max-width: 90%; /* Ensure cards are not too wide */
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: 1fr 1fr;
+    justify-content: center; /* Center align cards on small screens */
   }
 
-  .header-wrapper-second-section p {
-    font-size: 1.1rem; /* Adjust font size */
-    width: auto; /* Allow text to wrap properly */
+  .card {
+    max-width: 100%; /* Ensure cards are responsive on small screens */
+    width: 90%; /* Provide padding on the sides */
+  }
+
+  .card img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
   }
 }
 
 @media (max-width: 426px) {
   .card-container {
-    grid-template-columns: 1fr; /* Stack cards vertically on very small screens */
+    /* Stack cards vertically on very small screens if needed */
+  }
+
+  .card {
+    max-width: 100%; /* Ensure full width on very small screens */
+    width: 100%; /* Take full width of the container */
   }
 
   .header-wrapper-second-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 10px; /* Adjust padding for smaller screens */
   }
 
-  .header-wrapper-second-section p {
-    font-size: 1rem; /* Adjust font size */
-    width: auto; /* Allow text to wrap properly */
+  .header-wrapper-second-section h2 {
+    font-size: 2rem; /* Adjust font size for very small screens */
   }
 
-  .header-wrapper-second-section h2 {
-    font-size: 2.5rem; /* Adjust font size */
+  .header-wrapper-second-section p {
+    font-size: 0.9rem; /* Adjust font size for very small screens */
+    width: auto; /* Allow text to wrap properly */
   }
 }
 

@@ -7,7 +7,6 @@ import CardImgtwo from '/src/asset/images/Cards_images/mobileOfficeImgae.jpg.jpg
 import CardImgThree from '/src/asset/images/Cards_images/prefab-toilet.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
-
 const Secondsection = () => {
   useEffect(() => {
     const cards = gsap.utils.toArray(".card");
@@ -24,7 +23,7 @@ const Secondsection = () => {
           trigger: card,
           start: `top top`,
           scrub: true,
-          markers: true,
+          markers: false, // Set to false in production
           invalidateOnRefresh: true
         },
         ease: "none",
@@ -35,11 +34,11 @@ const Secondsection = () => {
         trigger: card,
         start: `top-=${index * spacer} top`,
         endTrigger: '.cards',
-        end: `bottom top+=${200 + (cards.length * spacer)}`,
+        end: `bottom top+=${200 + (cards.length * spacer)}`, // Adjusted end position
         pin: true,
         pinSpacing: false,
-        markers: true,
-        id: 'pin',
+        markers: false, // Set to false in production
+        id: `pin-${index}`,
         invalidateOnRefresh: true,
       });
     });
@@ -97,28 +96,14 @@ const Secondsection = () => {
                 where traditional facilities may not be available.
               </p>
             </article>
-            <article className="card">
-              <figure>
-                <img src={CardImgone} alt="Additional Image" />
-                <figcaption>Additional Image</figcaption>
-              </figure>
-              <p>
-                This card provides additional information about the prefab industry.
-              </p>
-            </article>
-            <article className="card">
-              <figure>
-                <img src={CardImgtwo} alt="Additional Image" />
-                <figcaption>Additional Image</figcaption>
-              </figure>
-              <p>
-                More details about prefab construction and its benefits.
-              </p>
-            </article>
           </div>
         </div>
       </main>
+
+     
     </section>
+
+    
   );
 };
 

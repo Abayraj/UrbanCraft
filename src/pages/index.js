@@ -93,10 +93,55 @@ const IndexPage = () => {
         </section>
         <SecondSection/>
       </main>
+      <header className="header-wrapper-second-section">
+        <h2>
+          Prefab Building Insights <br />
+          From Experts
+        </h2>
+        <p>
+          Dive into the world of prefabrication with insightful articles and
+          expert advice. Explore the latest trends, tips, and advancements in
+          prefab buildings from Ahmedabad's industry leaders.
+        </p>
+      </header>
+      <header className="header-wrapper-second-section">
+        <h2>
+          Prefab Building Insights <br />
+          From Experts
+        </h2>
+        <p>
+          Dive into the world of prefabrication with insightful articles and
+          expert advice. Explore the latest trends, tips, and advancements in
+          prefab buildings from Ahmedabad's industry leaders.
+        </p>
+      </header>
+      <header className="header-wrapper-second-section">
+        <h2>
+          Prefab Building Insights <br />
+          From Experts
+        </h2>
+        <p>
+          Dive into the world of prefabrication with insightful articles and
+          expert advice. Explore the latest trends, tips, and advancements in
+          prefab buildings from Ahmedabad's industry leaders.
+        </p>
+      </header>
+      <header className="header-wrapper-second-section">
+        <h2>
+          Prefab Building Insights <br />
+          From Experts
+        </h2>
+        <p>
+          Dive into the world of prefabrication with insightful articles and
+          expert advice. Explore the latest trends, tips, and advancements in
+          prefab buildings from Ahmedabad's industry leaders.
+        </p>
+      </header>
       <footer>
         <p>&copy; 2024 My Gatsby Site. All rights reserved.</p>
       </footer>
       <CustomCursor/>
+      
 
     </div>
   );
