@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/Navbar/nav';
-import SecondSection from '../components/SectionSecond/Secondsection'
+// import SecondSection from '../components/SectionSecond/Secondsection'
+import Secondsection from '../components/SectionSecond/SecondsectionCards';
 import { motion } from 'framer-motion';
 import './index.css';
 import FirstImage from "/src/asset/images/view-water-tank-storage.jpg";
@@ -9,6 +10,7 @@ import ThirdImage from '/src/asset/images/architect_image.jpg'
 import NextIcon from '/src/asset/images/arrow_forward_icon.svg';
 import PrevIcon from '/src/asset/images/arrow_backward_icon.svg';
 import CustomCursor from '../components/CustomCursor/CustomCursor';
+import Aboutcompany from '../components/AboutCompany/Aboutcompany';
 const slides = [
   { 
     id: 1, 
@@ -25,7 +27,7 @@ const slides = [
     image:SecondImage, 
     text: (
       <>
-    Elevate your space with our premier commercial builds. Quality you can trust.
+    Elevate your space with our premier commercial builds Quality you can trust.
       </>
     )
   },
@@ -34,7 +36,7 @@ const slides = [
     image:ThirdImage, 
     text: (
       <>
-     Refresh your space with our renovations. Watch us turn the old into new.
+     Refresh your space with our renovations Watch us turn the old into new.
       </>
     )
   }
@@ -71,7 +73,7 @@ const IndexPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2, ease: 'easeIn' }}
+            transition={{ duration: 2, ease: 'easeInOut' }}
             style={{
               backgroundImage: `url(${slide.image})`,
           
@@ -81,7 +83,7 @@ const IndexPage = () => {
               className="slide-text"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
+              transition={{ duration: 3, ease: 'easeOut' }}
             >
               {slide.text}
             </motion.p>
@@ -91,11 +93,11 @@ const IndexPage = () => {
             <img src={NextIcon} alt='next' />
           </button>
         </section>
-        <SecondSection/>
+        <Secondsection/>
+        <Aboutcompany/>
+      
       </main>
-      <footer>
-        <p>&copy; 2024 My Gatsby Site. All rights reserved.</p>
-      </footer>
+     
       <CustomCursor/>
 
     </div>
