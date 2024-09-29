@@ -11,7 +11,7 @@ const VideoSection = () => {
     const [currentTime, setCurrentTime] = useState(0);
     const [isMuted, setIsMuted] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth); 
+    const [screenWidth, setScreenWidth] = useState(null); 
      useEffect(() => {
 
     if (typeof window !== "undefined") {
