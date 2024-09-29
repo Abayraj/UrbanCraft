@@ -11,15 +11,18 @@ const VideoSection = () => {
     const [currentTime, setCurrentTime] = useState(0);
     const [isMuted, setIsMuted] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Track screen width
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth); 
+     useEffect(() => {
 
-    useEffect(() => {
-        const handleResize = () => setScreenWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+
+      const handleResize = () => setScreenWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
 
     const handleTimeUpdate = (e) => {
         const video = e.target;
