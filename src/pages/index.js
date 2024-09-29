@@ -59,7 +59,7 @@ const IndexPage = () => {
       </main>
 
       <CustomCursor />
-      <AdvantageSection />
+      {/* <AdvantageSection /> */}
 
 
     </div>
