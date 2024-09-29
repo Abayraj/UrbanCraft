@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.header-wrapper-second-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:80px;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.header-wrapper-second-section h2 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.header-wrapper-second-section p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.cards-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  
+   
+}
+.cards-grid{
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.card {
+    width: 330px;
+    height: 480px;
+    background: white;
+    border: 1px solid #e7dede;
+    box-shadow: 25px 35px 10px rgba(0, 0, 0,0.2);
+    padding: 0; 
+
+}
+.img-container .text-container{
+    padding: 15px;
+}
+.img-container .text-container p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+
+.img-container img {
+    width: 100%;
+    margin-bottom: 0;
+    aspect-ratio: 16 / 10;
+    object-fit:fill;
+}
+
+
+.img-container .text-container figcaption {
+    border-radius: 12px;
+    padding-top: 0px;
+    padding-bottom: 8px;
+    color: #333;
+    font-size:1.4rem;
+    font-weight:bold;
+    font-family: "Be Vietnam Pro", sans-serif;
+    box-sizing: border-box;
+}
+
+.img-container .text-container figcaption:hover {
+    background: white;
+    color: #333;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+  
+    .header-wrapper-second-section {
+        gap:40px;
+        padding-bottom: 20px;
+    }
+
+.header-wrapper-second-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    box-sizing: border-box;
+}
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-wrapper-second-section p{
+        font-size: 1.1rem; 
+        width: auto; 
+    }
+    .card {
+        width: 330px;
+        height: 490px;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+        padding: 0; /* Adjust padding to zero to ensure image takes full width */
+    
+    }
+   
+}
+
+@media (max-width: 426px) {
+   .section-two .header-wrapper-second-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px; 
+       
+    }
+    .card-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .header-wrapper-second-section p {
+        font-size: 1rem; 
+        width: auto; 
+    }
+
+    .header-wrapper-second-section h2 {
+        font-size: 2.5rem; 
+    }
+    .cards-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card {
+        width: 160px;
+        height: 280px;
+        background: rgb(255, 255, 255);
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+        padding: 0; /* Adjust padding to zero to ensure image takes full width */
+    
+    }
+    .img-container .text-container p{
+        font-family: "Ubuntu", sans-serif;
+        font-size: 0.5rem;
+        font-weight: 400;
+        line-height: 13px;
+    }
+    .img-container .text-container figcaption {
+        border-radius: 12px;
+        padding-top: 0px;
+        padding-bottom: 8px;
+        color: #333;
+        font-size:0.9rem;
+        font-weight:bold;
+        font-family: "Be Vietnam Pro", sans-serif;
+        box-sizing: border-box;
+    }
+
+   
+}

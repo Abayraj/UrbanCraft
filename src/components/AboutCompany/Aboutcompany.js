@@ -39,7 +39,7 @@ const AboutCompany = () => {
                 viewport={{ once: false }}
           >who we are?</motion.h4>
           <h2>
-            About UrbanCraft Prefab:
+            About UrbanCraft
             <br />
             Our Journey
           </h2>
