@@ -50,13 +50,15 @@ body {
 }
 
 .card {
-    width: 330px;
+    width: 312px;
     height: 480px;
     background: white;
     border: 1px solid #e7dede;
     box-shadow: 25px 35px 10px rgba(0, 0, 0,0.2);
-    padding: 0; 
 
+}
+.card:hover{
+    box-shadow:none;
 }
 .img-container .text-container{
     padding: 15px;
@@ -119,10 +121,18 @@ body {
     .cards-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .header-wrapper-second-section{
+    gap:60px
+    }
 
     .header-wrapper-second-section p{
-        font-size: 1.1rem; 
+        font-size: 1.2rem;
+        font-weight: 300; 
         width: auto; 
+    }
+    .header-wrapper-second-section h2{
+        width: 300px;
+        font-size: 3rem;
     }
     .card {
         width: 330px;
@@ -133,16 +143,19 @@ body {
         padding: 0; /* Adjust padding to zero to ensure image takes full width */
     
     }
+ 
    
 }
 
 @media (max-width: 426px) {
+
    .section-two .header-wrapper-second-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        padding: 50px; 
+        gap: 20px;
+        padding: 30px; 
        
     }
     .card-container {
@@ -172,7 +185,7 @@ body {
     .img-container .text-container p{
         font-family: "Ubuntu", sans-serif;
         font-size: 0.5rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 13px;
     }
     .img-container .text-container figcaption {
@@ -185,6 +198,34 @@ body {
         font-family: "Be Vietnam Pro", sans-serif;
         box-sizing: border-box;
     }
+    .construction-services{
+        margin-top: 290px;
+    }
+    .services-wrapper .side-content p{
+        width: 390px;
+    }
+
 
    
+}
+@media (max-width: 320px) {
+    .cards-grid{
+        display: grid;
+        column-gap: 5px;
+        row-gap: 25px;
+        grid-template-columns: 1fr 1fr ; 
+    }
+    .card {
+        width: 150px;
+        height: 270px;
+        background: rgb(255, 255, 255);
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+        padding: 0; /* Adjust padding to zero to ensure image takes full width */
+    
+    }
+    .construction-service{
+        margin-top: 800px;
+        background: firebrick;
+    }
 }

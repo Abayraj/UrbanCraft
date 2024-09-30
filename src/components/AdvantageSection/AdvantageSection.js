@@ -14,38 +14,39 @@ const AdvantageSection = () => {
             <div className="adv-heading">
                 <div>
                     <h4>OUR ADVANTAGE</h4>
-                    <h3>Providing The Best Service To<br />Build Your Dream</h3>
+                    <h3>Providing The Best Service To Build Your Dream</h3>
                 </div>
             </div>
             <div className="adv-cards-wrapper">
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                    <img src={FirstImage} alt=""/>
+                        <img src={FirstImage} alt="" />
                     </div>
-                    <div>
+                    <div className="adv-text">
                         <h2>Professional Workers</h2>
-                        <p>"The best, expertly trained workers, equipped with exceptional skills and experience,<br/>consistently delivering high-quality results with precision,<br/> dedication, and reliability."</p>
+                        <p>"Our team of highly trained professionals combines years of experience with a commitment to delivering top-tier results every time."</p>
                     </div>
                 </div>
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                    <img src={SecondImage} alt=""/>
+                        <img src={SecondImage} alt="" />
                     </div>
-                    <div>
-                        <h2>Guaranteed quality</h2>
-                        <p>"The best, expertly trained workers, equipped with exceptional skills and experience,<br/>consistently delivering high-quality results with precision,<br/> dedication, and reliability."</p>
+                    <div className="adv-text">
+                        <h2>Guaranteed Quality</h2>
+                        <p>"With expert precision and attention to detail, our workers ensure that every project is completed to the highest quality standards."</p>
                     </div>
                 </div>
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                    <img src={ThirdImage} alt=""/>
+                        <img src={ThirdImage} alt="" />
                     </div>
-                    <div>
-                        <h2>Professional Workers</h2>
-                        <p>"The best, expertly trained workers, equipped with exceptional skills and experience,<br/>consistently delivering high-quality results with precision,<br/> dedication, and reliability."</p>
+                    <div className="adv-text">
+                        <h2>Experienced Craftsmanship</h2>
+                        <p>"Leveraging their expertise and dedication, our workers consistently provide reliable, flawless results on every project."</p>
                     </div>
                 </div>
             </div>
+
         </section>
     )
 

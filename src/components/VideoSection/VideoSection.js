@@ -65,7 +65,6 @@ const VideoSection = () => {
         // Screen width breakpoints
         const isMobile = screenWidth < 768;
         const isTablet = screenWidth >= 768 && screenWidth < 1200;
-        const isDesktop = screenWidth >= 1200;
     
         // Early return to hide text after 31 seconds
         if (currentTime >= 31) {
