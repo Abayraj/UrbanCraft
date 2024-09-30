@@ -1,231 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.section-two {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
 }
 
 .header-wrapper-second-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap:80px;
-    padding: 60px;
-    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .header-wrapper-second-section h2 {
-    font-size: 3.4rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 600;
     font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
 }
 
 .header-wrapper-second-section p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
+    font-size: 1.1rem;
     font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .cards-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-  
-   
-}
-.cards-grid{
-    display: grid;
-    column-gap: 50px;
-    row-gap: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    width: 100%;
 }
 
+/* Card Styles */
 .card {
-    width: 312px;
-    height: 480px;
-    background: white;
-    border: 1px solid #e7dede;
-    box-shadow: 25px 35px 10px rgba(0, 0, 0,0.2);
-
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
 }
-.card:hover{
-    box-shadow:none;
-}
-.img-container .text-container{
-    padding: 15px;
-}
-.img-container .text-container p{
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 26px;
+.card {
+    width: 450px;
+    height: 450px;
 }
 
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
 .img-container img {
     width: 100%;
-    margin-bottom: 0;
-    aspect-ratio: 16 / 10;
-    object-fit:fill;
+    object-fit: cover;
+    height: 200px;
 }
 
+.text-container {
+    padding: 20px;
+}
 
-.img-container .text-container figcaption {
-    border-radius: 12px;
-    padding-top: 0px;
-    padding-bottom: 8px;
-    color: #333;
-    font-size:1.4rem;
-    font-weight:bold;
+.text-container figcaption {
+    font-size: 1.4rem;
     font-family: "Be Vietnam Pro", sans-serif;
-    box-sizing: border-box;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.img-container .text-container figcaption:hover {
-    background: white;
-    color: #333;
-    text-decoration: underline;
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
 }
-
-
-@media (max-width: 1024px) {
-    .cards-grid {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 40px;
-    }
-  
-    .header-wrapper-second-section {
-        gap:40px;
-        padding-bottom: 20px;
-    }
-
-.header-wrapper-second-section {
+.swiper-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px;
-    box-sizing: border-box;
+    justify-content:space-evenly;
 }
-}
-
-@media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .header-wrapper-second-section{
-    gap:60px
-    }
-
-    .header-wrapper-second-section p{
-        font-size: 1.2rem;
-        font-weight: 300; 
-        width: auto; 
-    }
-    .header-wrapper-second-section h2{
-        width: 300px;
-        font-size: 3rem;
-    }
-    .card {
-        width: 330px;
-        height: 490px;
-        background: white;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
-        padding: 0; /* Adjust padding to zero to ensure image takes full width */
-    
-    }
- 
-   
+/* Swiper container customization */
+.swiper-container {
+    padding: 30px 0;
 }
 
-@media (max-width: 426px) {
-
-   .section-two .header-wrapper-second-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 20px;
-        padding: 30px; 
-       
-    }
-    .card-container {
-        grid-template-columns: 1fr; 
+/* Breakpoints for smaller screens */
+@media (max-width: 1024px) {
+    .header-wrapper-second-section h2 {
+        font-size: 2rem;
     }
 
     .header-wrapper-second-section p {
-        font-size: 1rem; 
-        width: auto; 
+        font-size: 1rem;
     }
+}
 
+@media (max-width: 768px) {
     .header-wrapper-second-section h2 {
-        font-size: 2.5rem; 
-    }
-    .cards-grid{
-        grid-template-columns: 1fr 1fr;
-    }
-    .card {
-        width: 160px;
-        height: 280px;
-        background: rgb(255, 255, 255);
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
-        padding: 0; /* Adjust padding to zero to ensure image takes full width */
-    
-    }
-    .img-container .text-container p{
-        font-family: "Ubuntu", sans-serif;
-        font-size: 0.5rem;
-        font-weight: 500;
-        line-height: 13px;
-    }
-    .img-container .text-container figcaption {
-        border-radius: 12px;
-        padding-top: 0px;
-        padding-bottom: 8px;
-        color: #333;
-        font-size:0.9rem;
-        font-weight:bold;
-        font-family: "Be Vietnam Pro", sans-serif;
-        box-sizing: border-box;
-    }
-    .construction-services{
-        margin-top: 290px;
-    }
-    .services-wrapper .side-content p{
-        width: 390px;
+        font-size: 1.8rem;
     }
 
+    .header-wrapper-second-section p {
+        font-size: 0.95rem;
+    }
 
-   
-}
-@media (max-width: 320px) {
-    .cards-grid{
-        display: grid;
-        column-gap: 5px;
-        row-gap: 25px;
-        grid-template-columns: 1fr 1fr ; 
-    }
     .card {
-        width: 150px;
-        height: 270px;
-        background: rgb(255, 255, 255);
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
-        padding: 0; /* Adjust padding to zero to ensure image takes full width */
-    
+        width: 250px;
+        height: 450px;
+        margin: 0 auto;
     }
-    .construction-service{
-        margin-top: 800px;
-        background: firebrick;
+
+    .img-container img {
+        height: 180px;
     }
 }
+
+@media (max-width: 480px) {
+    .header-wrapper-second-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-wrapper-second-section p {
+        font-size: 0.85rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 400px;
+    }
+
+    .img-container img {
+        height: 150px;
+    }
+}
+

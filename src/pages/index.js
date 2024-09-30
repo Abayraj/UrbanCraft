@@ -21,9 +21,6 @@ const IndexPage = () => {
         <AdvantageSection/>
         <Aboutcompany />
         <OurService/>
-       
-
-
       </main>
 
       <CustomCursor />

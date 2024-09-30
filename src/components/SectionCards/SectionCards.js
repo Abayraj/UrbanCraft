@@ -1,119 +1,98 @@
-import React from "react";
-import "./secondsectionCards.css";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import './secondsectionCards.css';
+
 import CardImgone from "/src/asset/images/Cards_images/pikaso_texttoimage_prefab-homes-photos-small.jpeg";
 import CardImgtwo from "/src/asset/images/Cards_images/mobileOfficeImgae.jpg.jpg";
-import CardImgthree from "/src/asset/images/Cards_images/prefab-toilet.jpg"
-
+import CardImgthree from "/src/asset/images/Cards_images/prefab-toilet.jpg";
 
 const SectionCards = () => {
   return (
     <section className="section-two">
       <header className="header-wrapper-second-section">
-        <motion.h2
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-          viewport={{ once: false }}
-        >
-          Prefab Building Insights <br />
-          From Experts
-        </motion.h2>
-        <div>
-        <motion.p
-          initial={{ opacity: 0, x: 90 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-          viewport={{ once: false }}
-        >
-          Dive into the world of prefabrication with insightful articles and
-          expert advice. Explore the latest trends, tips, and advancements in
-          prefab buildings from Ahmedabad's industry leaders.
-        </motion.p>
-        </div>
-  
+        <h2>Prefab Building Insights From Experts</h2>
+        <p>
+          Dive into the world of prefabrication with insightful articles and expert advice. Explore the latest trends, tips, and advancements in prefab buildings from Ahmedabad's industry leaders.
+        </p>
       </header>
-      <section
-        className="cards-wrapper"
-     
-      >
-        <motion.main 
-        className="cards-grid"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 5 } }}
-        viewport={{ once: false }}
-        > 
-          <article 
-          className="card" 
-          >
-            <figure className="img-container">
-              <img src={CardImgone} alt="prefab home" />
-              <div className="text-container">
-                <figcaption>Prefab Homes</figcaption>
-                <p>
-                  Prefab homes, or prefabricated homes, are revolutionizing the way we
-                  think about housing. Built from components that are manufactured
-                  off-site and then assembled at the final location, prefab homes offer
-                  a blend of affordability, efficiency.
-                </p>
-              </div>
-            </figure>
-
-
-          </article>
-          <article className="card">
-            <figure className="img-container">
-              <img src={CardImgtwo} alt="prefab office" />
-              <div className="text-container">
-                <figcaption>Prefab Offices</figcaption>
-                <p>
-                  Prefab homes, or prefabricated homes, are revolutionizing the way we
-                  think about housing. Built from components that are manufactured
-                  off-site and then assembled at the final location, prefab homes offer
-                  a blend of affordability, efficiency.
-                </p>
-              </div>
-            </figure>
-
-          </article>
-          <article className="card">
-            <figure className="img-container">
-              <img src={CardImgthree} alt="prefab toilets" />
-              <div className="text-container">
-                <figcaption>Portable Toilets</figcaption>
-                <p>
-                  Prefab homes, or prefabricated homes, are revolutionizing the way we
-                  think about housing. Built from components that are manufactured
-                  off-site and then assembled at the final location, prefab homes offer
-                  a blend of affordability, efficiency.
-                </p>
-              </div>
-            </figure>
-
-          </article>
-          <article className="card">
-            <figure className="img-container">
-              <img src={CardImgthree} alt="prefab toilets" />
-              <div className="text-container">
-                <figcaption>Portable Toilets</figcaption>
-                <p>
-                  Prefab homes, or prefabricated homes, are revolutionizing the way we
-                  think about housing. Built from components that are manufactured
-                  off-site and then assembled at the final location, prefab homes offer
-                  a blend of affordability, efficiency.
-                </p>
-              </div>
-            </figure>
-
-          </article>
-          
-          
-        </motion.main>
+      <section className="cards-wrapper">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <article className="card">
+              <figure className="img-container">
+                <img src={CardImgone} alt="Prefab Home" />
+                <div className="text-container">
+                  <figcaption>Prefab Homes</figcaption>
+                  <p>
+                    Prefab homes are revolutionizing housing. Built from components manufactured off-site, they offer a blend of affordability and efficiency.
+                  </p>
+                </div>
+              </figure>
+            </article>
+          </SwiperSlide>
+          <SwiperSlide>
+            <article className="card">
+              <figure className="img-container">
+                <img src={CardImgtwo} alt="Prefab Office" />
+                <div className="text-container">
+                  <figcaption>Prefab Offices</figcaption>
+                  <p>
+                    Prefab offices offer cost-effective and fast solutions for modern workspaces. Built quickly, they save both time and money.
+                  </p>
+                </div>
+              </figure>
+            </article>
+          </SwiperSlide>
+          <SwiperSlide>
+            <article className="card">
+              <figure className="img-container">
+                <img src={CardImgthree} alt="Prefab Toilets" />
+                <div className="text-container">
+                  <figcaption>Portable Toilets</figcaption>
+                  <p>
+                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
+                  </p>
+                </div>
+              </figure>
+            </article>
+          </SwiperSlide>
+          <SwiperSlide>
+            <article className="card">
+              <figure className="img-container">
+                <img src={CardImgthree} alt="Prefab Toilets" />
+                <div className="text-container">
+                  <figcaption>Portable Toilets</figcaption>
+                  <p>
+                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
+                  </p>
+                </div>
+              </figure>
+            </article>
+          </SwiperSlide>
+        </Swiper>
       </section>
-
     </section>
   );
 };
 
 export default SectionCards;
+
+
 
 
 

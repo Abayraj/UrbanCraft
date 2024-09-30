@@ -143,6 +143,11 @@ hr{
         line-height: 31px;
       
     }
+    .side-content p{
+        width: 330px;
+        text-align: left;
+    }
+ 
     .question-wrapper .question{
         font-size: 14px;
     }
@@ -158,6 +163,14 @@ hr{
       
     }
 
+}
+
+@media only screen and (max-width: 320px) {
+    .side-content p{
+        width: 270px;
+        text-align: left;
+    }
+ 
 }
 
 @media (max-width: 768px) {
