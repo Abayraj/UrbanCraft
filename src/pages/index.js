@@ -7,6 +7,7 @@ import AdvantageSection from '../components/AdvantageSection/AdvantageSection.js
 import Aboutcompany from '../components/AboutCompany/Aboutcompany';
 import OurService from "../components/OurService/OurService.js"
 import VideoSection from '../components/VideoSection/VideoSection.js';
+import"./index.css"
 
 
 const IndexPage = () => { 
@@ -18,7 +19,7 @@ const IndexPage = () => {
       <main>
         <VideoSection/>
         <Secondsection />
-        <AdvantageSection/>
+        <AdvantageSection/> 
         <Aboutcompany />
         <OurService/>
       </main>

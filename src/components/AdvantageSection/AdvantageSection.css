@@ -64,11 +64,23 @@
     font-size: 0.9rem;
 }
 
-@media (max-width:426px){
-
+@media only screen and (max-width:426px){
+    .adv-cards-wrapper{
+        padding:20px ;
+    }
+    .adv-cards-img-container{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 20px;
+        background-color:green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
     .adv-heading h4{
         color: green;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-family: "Be Vietnam Pro", sans-serif;
         margin-top: 0;
         
@@ -81,10 +93,19 @@
         font-family: "Be Vietnam Pro", sans-serif;
     }
     .adv-text h2{
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
     .adv-text p{
-        font-size: 0.9rem;
+        font-size: 1rem;
+        width: 340px;
+    }
+    @media only screen and (max-width:320px){
+        .adv-text{
+            width: 290px;
+        }
+        .adv-text p{
+        width: 290px;
+        }
     }
 
 }

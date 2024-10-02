@@ -3,67 +3,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: "Ubuntu", sans-serif;
-}
 
 .section-two {
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background: white;
 }
 
 .header-wrapper-second-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
     text-align: center;
-    margin-bottom: 40px;
+    padding: 20px 40px 90px;
 }
 
-.header-wrapper-second-section h2 {
-    font-size: 2.5rem;
+.header-wrapper-second-section h2{
+    font-size:4.5rem;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px;
+    font-family: "Poppins",Verdana, Geneva, Tahoma, sans-serif;
+    width: 600px;
+    text-align: left;
+
 }
 
 .header-wrapper-second-section p {
-    font-size: 1.1rem;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 400;
+    font-size: 1.7rem;
+    font-family: "Poppins";
+    font-weight: 300;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
 }
 
-.cards-wrapper {
-    width: 100%;
-}
 
-/* Card Styles */
 .card {
     background-color: white;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-.card {
-    width: 450px;
-    height: 450px;
-}
-
-.card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+     text-align: left;
+     width: 329px;
+     height: 440px;
 }
 
 .img-container img {
     width: 100%;
     object-fit: cover;
     height: 200px;
+
 }
 
 .text-container {
@@ -104,41 +89,66 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header-wrapper-second-section {
+        flex-direction: column;
+    }
     .header-wrapper-second-section h2 {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
     }
 
     .header-wrapper-second-section p {
-        font-size: 0.95rem;
+        font-size: 1.3rem;
     }
 
     .card {
-        width: 250px;
-        height: 450px;
-        margin: 0 auto;
+        width: 309px;
+        height: 440px;
     }
 
     .img-container img {
         height: 180px;
     }
+    .cards-wrapper {
+        width: 100%;
+    
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
+    .header-wrapper-second-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 20px 40px 90px;
+    }
+    
     .header-wrapper-second-section h2 {
-        font-size: 1.5rem;
+        font-size: 4rem;
+        width: 300px;
+        text-align: left;
     }
 
     .header-wrapper-second-section p {
-        font-size: 0.85rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: left;
     }
 
     .card {
         width: 100%;
         height: 400px;
+      
     }
 
     .img-container img {
         height: 150px;
+    }
+    .text-container figcaption{
+        font-size: 1.5rem;
+        font-weight: 800;
+        
     }
 }
 
