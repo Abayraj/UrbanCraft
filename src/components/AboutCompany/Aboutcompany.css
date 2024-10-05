@@ -68,13 +68,13 @@
 .company-info h4 {
     position: relative;
     display: inline-block;
-    background-color: #ffffff; /* Base color for the scratched effect */
-    color: #333; /* Text color */
-    padding: 10px 15px; /* Increased padding for better effect */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    font-weight: bold; /* Bold text for better visibility */
-    border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Ensures pseudo-elements are contained */
+    background-color: #ffffff; 
+    color: #333;
+    padding: 10px 15px; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    border-radius: 5px;
+    overflow: hidden; 
   }
   
   .company-info h4::before {

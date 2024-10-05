@@ -10,6 +10,7 @@ import './secondsectionCards.css';
 import CardImgone from "/src/asset/images/Cards_images/pikaso_texttoimage_prefab-homes-photos-small.jpeg";
 import CardImgtwo from "/src/asset/images/Cards_images/mobileOfficeImgae.jpg.jpg";
 import CardImgthree from "/src/asset/images/Cards_images/prefab-toilet.jpg";
+import CardImgfour from "/src/asset/images/Cards_images/container_home.jpg"
 
 const SectionCards = () => {
   return (
@@ -46,11 +47,28 @@ const SectionCards = () => {
           Dive into the world of prefabrication with insightful articles and expert advice. Explore the latest trends, tips, and advancements in prefab buildings from Ahmedabad's industry leaders.
         </motion.p>
       </header>
+      {/* <div className='what-offer'>
+      <h1 >What we offer</h1>
+      </div> */}
+ 
       <section className="cards-wrapper">
+      <div className='what-offer'>
+      <motion.h1 
+       initial={{
+        opacity: 0,
+        y: 60,
+      }}
+      whileInView={{
+        opacity: 2,
+        y: 0, 
+        transition: {
+          duration: 3, 
+        },
+      }}
+      >What We Bring to You</motion.h1>
+      </div>
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           breakpoints={{
             320: {
@@ -67,114 +85,66 @@ const SectionCards = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 15,
             },
             1440: {
               slidesPerView:4,
-              spaceBetween: 40,
+              spaceBetween: 10,
             },
-            1920: {
-              slidesPerView: 5,
-              spaceBetween: 50,
-            },
-            2560: {
-              slidesPerView: 6,
-              spaceBetween: 60,
-            }
+            // 1920: {
+            //   slidesPerView: 5,
+            //   spaceBetween: 50,
+            // },
+            // 2560: {
+            //   slidesPerView: 6,
+            //   spaceBetween: 60,
+            // }
           }}
         >
           <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgone} alt="Prefab Home" />
-                <div className="text-container">
-                  <figcaption>Prefab Homes</figcaption>
-                  <p>
-                    Prefab homes are revolutionizing housing. Built from components manufactured off-site, they offer a blend of affordability and efficiency.
-                  </p>
-                </div>
+          <figure className="img-container">
+                <img src={CardImgfour} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
           </SwiperSlide>
 
           <SwiperSlide>
-            <article className="card">
+            
               <figure className="img-container">
+                <img src={CardImgone} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
+              </figure>
+          </SwiperSlide>
+
+          <SwiperSlide>
+          <figure className="img-container">
                 <img src={CardImgtwo} alt="Prefab Office" />
-                <div className="text-container">
-                  <figcaption>Prefab Offices</figcaption>
-                  <p>
-                    Prefab offices offer cost-effective and fast solutions for modern workspaces. Built quickly, they save both time and money.
-                  </p>
-                </div>
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgthree} alt="Prefab Toilets" />
-                <div className="text-container">
-                  <figcaption>Portable Toilets</figcaption>
-                  <p>
-                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
-                  </p>
-                </div>
-              </figure>
-            </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgthree} alt="Prefab Toilets" />
-                <div className="text-container">
-                  <figcaption>Portable Toilets</figcaption>
-                  <p>
-                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
-                  </p>
-                </div>
+          <figure className="img-container">
+                <img src={CardImgfour} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgthree} alt="Prefab Toilets" />
-                <div className="text-container">
-                  <figcaption>Portable Toilets</figcaption>
-                  <p>
-                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
-                  </p>
-                </div>
+          <figure className="img-container">
+                <img src={CardImgfour} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgthree} alt="Prefab Toilets" />
-                <div className="text-container">
-                  <figcaption>Portable Toilets</figcaption>
-                  <p>
-                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
-                  </p>
-                </div>
+          <figure className="img-container">
+                <img src={CardImgfour} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
           </SwiperSlide>
           <SwiperSlide>
-            <article className="card">
-              <figure className="img-container">
-                <img src={CardImgthree} alt="Prefab Toilets" />
-                <div className="text-container">
-                  <figcaption>Portable Toilets</figcaption>
-                  <p>
-                    Portable prefab toilets offer quick setup, hygiene, and versatility in areas where sanitation is required temporarily or permanently.
-                  </p>
-                </div>
+          <figure className="img-container">
+                <img src={CardImgfour} alt="Prefab Office" />
+                <figcaption>Container Home</figcaption>
               </figure>
-            </article>
           </SwiperSlide>
 
           {/* Add more SwiperSlides here as needed */}

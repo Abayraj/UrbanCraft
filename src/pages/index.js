@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../components/Navbar/nav';
+import Footer from '../components/Footer/Footer.js'
 // import SecondSection from '../components/SectionSecond/Secondsection'
 import Secondsection from '../components/SectionCards/SectionCards';
 import CustomCursor from '../components/CustomCursor/CustomCursor';
@@ -22,6 +23,7 @@ const IndexPage = () => {
         <AdvantageSection/> 
         <Aboutcompany />
         <OurService/>
+        <Footer/>
       </main>
 
       <CustomCursor />

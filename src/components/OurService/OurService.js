@@ -39,31 +39,33 @@ const OurService = () => {
                     </ul>
                     {/* Accordion Section for Q&A */}
                     <section className="accordion-wrapper">
-            <h1>Frequently Asked Questions?</h1>
-            {faqs.map((data, index) => (
-                <div key={data.id} className="faq-container">
-                    <hr />
-                    <div className="question-wrapper">
-                        <h5 className="question" onClick={() => setOpen(open === index ? -1 : index)}>
-                            {data.question}
-                        </h5>
-                        <button onClick={() => setOpen(open === index ? -1 : index)} className="icons">
-                            <img className="arrow" src={open === index ? ArrowUp : ArrowDown} alt="toggle arrow" />
-                        </button>
-                    </div>
-                    {open === index && (
-                        <motion.div
-                            className="answer-wrapper"
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <p className="answer">{data.answer}</p>
-                        </motion.div>
-                    )}
-                </div>
-            ))}
-        </section>
+                        <h1>Frequently Asked Questions?</h1>
+                        {faqs.map((data, index) => (
+                            <div key={data.id} className="faq-container">
+                                <hr/>
+                                <div className="question-wrapper">
+                                    <h5 className="question" onClick={() => setOpen(open === index ? -1 : index)}>
+                                        {data.question}
+                                    </h5>
+                                    <button onClick={() => setOpen(open === index ? -1 : index)} className="icons">
+                                        <img className="arrow" src={open === index ? ArrowUp : ArrowDown} alt="toggle arrow" />
+                                    </button>
+                                </div>
+                                {open === index && (
+                                    <motion.div
+                                        className="answer-wrapper"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        <p className="answer">{data.answer}</p>
+                                    </motion.div>
+                                )}
+                            </div>
+                            
+                        ))}
+                              <hr/>
+                    </section>
                 </aside>
             </div>
 
@@ -71,4 +73,5 @@ const OurService = () => {
 
     )
 }
+
 export default OurService

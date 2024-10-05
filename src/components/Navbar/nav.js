@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import "./nav.css"
-import Logo from "/src/asset/images/Png-04.png"
+import Logo from "/src/asset/images/urbancraft_logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

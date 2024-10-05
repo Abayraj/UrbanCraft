@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.footer-wrapper {
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+
+.footer-wrapper .footer-left-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 2.7rem;
+}
+
+
+.right-side-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    gap: 30px;
+    width: 500px;
+}
+
+
+.icons-right-container {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons-right-container .icons-cricle {
+    width: 50px;    
+    height: 50px;
+    background: white;
+    border-radius: 50%; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transition: transform 0.3s ease
+}
+
+.icons-right-container img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+
+.icons-right-container img:hover {
+    transform: scale(1.1); 
+}
+
+.copyright-text{
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.copyright-text p{
+    margin: 10px;
+}
+.right-side-wrapper .contact-us{
+    font-size:1.8rem;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}

@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `UrbanCraft`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -36,7 +36,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/asset/images/urban-craft-logo-f20c6f55904cc6751a0284b9febda0c1.png`, // This path is relative to the root of the site.
+        icon:`src/asset/images/urban-craft-logo-f20c6f55904cc6751a0284b9febda0c1.png`, // This path is relative to the root of the site.
       },
     },
   ],
