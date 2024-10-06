@@ -9,8 +9,10 @@ import './secondsectionCards.css';
 
 import CardImgone from "/src/asset/images/Cards_images/pikaso_texttoimage_prefab-homes-photos-small.jpeg";
 import CardImgtwo from "/src/asset/images/Cards_images/mobileOfficeImgae.jpg.jpg";
-import CardImgthree from "/src/asset/images/Cards_images/prefab-toilet.jpg";
-import CardImgfour from "/src/asset/images/Cards_images/container_home.jpg"
+import ContainerHome from "/src/asset/images/Cards_images/container_home.jpg"
+import cafe from "/src/asset/images/Cards_images/cafe.jpeg"
+import washRoom from "/src/asset/images/Cards_images/wash_room.jpeg"
+import PortableToilet from "/src/asset/images/Cards_images/portable_toilet.jpeg"
 
 const SectionCards = () => {
   return (
@@ -29,7 +31,7 @@ const SectionCards = () => {
           },
         }}
         viewport={{ once: false }}
-        >Prefab Building Insights From Experts</motion.h2>
+        >UrbanCraft Expert Insights on Innovative Building Solutions</motion.h2>
         <motion.p
          initial={{
           opacity: 0,
@@ -44,7 +46,7 @@ const SectionCards = () => {
         }}
         viewport={{ once: false }}
         >
-          Dive into the world of prefabrication with insightful articles and expert advice. Explore the latest trends, tips, and advancements in prefab buildings from Ahmedabad's industry leaders.
+          Join us as we explore the transformative world of construction solutions. Gain valuable knowledge from industry experts and discover best practices that can elevate your projects across India.
         </motion.p>
       </header>
       {/* <div className='what-offer'>
@@ -101,9 +103,28 @@ const SectionCards = () => {
             // }
           }}
         >
+          
           <SwiperSlide>
           <figure className="img-container">
-                <img src={CardImgfour} alt="Prefab Office" />
+                <img src={cafe} alt="Prefab Office" />
+                <figcaption>Mobile Bistro</figcaption>
+              </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+          <figure className="img-container">
+                <img src={washRoom} alt="Prefab Office" />
+                <figcaption>Modern Washrooms</figcaption>
+              </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+          <figure className="img-container">
+                <img src={PortableToilet} alt="Prefab Office" />
+                <figcaption>Portable Toilets</figcaption>
+              </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+          <figure className="img-container">
+                <img src={ContainerHome} alt="Prefab Office" />
                 <figcaption>Container Home</figcaption>
               </figure>
           </SwiperSlide>
@@ -112,37 +133,19 @@ const SectionCards = () => {
             
               <figure className="img-container">
                 <img src={CardImgone} alt="Prefab Office" />
-                <figcaption>Container Home</figcaption>
+                <figcaption>Prefab Home</figcaption>
               </figure>
           </SwiperSlide>
 
           <SwiperSlide>
           <figure className="img-container">
                 <img src={CardImgtwo} alt="Prefab Office" />
-                <figcaption>Container Home</figcaption>
+                <figcaption>Prefab Office</figcaption>
               </figure>
           </SwiperSlide>
           <SwiperSlide>
           <figure className="img-container">
-                <img src={CardImgfour} alt="Prefab Office" />
-                <figcaption>Container Home</figcaption>
-              </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-          <figure className="img-container">
-                <img src={CardImgfour} alt="Prefab Office" />
-                <figcaption>Container Home</figcaption>
-              </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-          <figure className="img-container">
-                <img src={CardImgfour} alt="Prefab Office" />
-                <figcaption>Container Home</figcaption>
-              </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-          <figure className="img-container">
-                <img src={CardImgfour} alt="Prefab Office" />
+                <img src={ContainerHome} alt="Prefab Office" />
                 <figcaption>Container Home</figcaption>
               </figure>
           </SwiperSlide>
