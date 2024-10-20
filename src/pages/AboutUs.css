@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+.about-us-sectionone-container{
+     /* background-image: url('../asset//images/About_us/container_lift.jpeg'); */
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full page height */
+  padding: 50px;
+}
+.section-one-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.section-one-text h1{
+    color: black;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+.section-one-text p{
+    margin: 0;
+    padding: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.2rem;
+}
+
+.text-image-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-text-parent{
+width: 600px;
+}
+.left-text-parent h1{
+    font-weight: 700;
+}
+.left-text-parent p{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 500;
+}
+

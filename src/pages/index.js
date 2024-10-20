@@ -21,8 +21,8 @@ const IndexPage = () => {
         <VideoSection/>
         <Secondsection />
         <AdvantageSection/> 
-        <OurService/>
         <Aboutcompany />
+        <OurService/>
         <Footer/>
       </main>
 

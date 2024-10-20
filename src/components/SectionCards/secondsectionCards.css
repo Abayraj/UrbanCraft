@@ -34,26 +34,22 @@
 /* Card Styles */
 .img-container {
     text-align: left;
-    /* Center align captions */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .img-container:hover {
-
     transform: scale(1.05);
-   
 }
 
-.img-container img {
+.img-container .card_image {
     width: 100%;
-    object-fit: cover;
     height: 350px;
-
+    object-fit: cover; 
+  
 }
 
 /* Swiper Styles */
 .cards-wrapper {
-
     padding: 105px;
 }
 
@@ -66,6 +62,13 @@
 .img-container figcaption {
     font-size: 1.3rem;
     font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: black;
+    padding-top: 0px;
+}
+
+.cards-wrapper a {
+    text-decoration: none;  
 }
 
 .what-offer h1 {
@@ -110,7 +113,7 @@
     }
 }
 
-@media only screen and (max-width:375px) {
+@media only screen and (max-width: 375px) {
     .section-two .header-wrapper-second-section h2 {
         font-size: 3.3rem;
         color: black;
@@ -118,22 +121,20 @@
         font-family: "Be Vietnam Pro", sans-serif;
         width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 425px) {
     .header-wrapper-second-section h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         width: 100%;
-        /* Adjust for smaller screens */
     }
 
     .header-wrapper-second-section p {
         font-size: 1.5rem;
     }
 
-    .img-container img {
-        height: 350px;
+    .img-container .card_image {
+        height: 300px;
     }
 
     .cards-wrapper {
@@ -143,10 +144,9 @@
     .what-offer {
         text-align: center;
         font-family: "Poppins", sans-serif;
-        font-size: 2rem;
+        font-size: 0rem;
         font-weight: 400;
-        color: black;
+        color: rgb(199, 22, 22);
         margin-bottom: 60px;
     }
-
 }

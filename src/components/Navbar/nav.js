@@ -12,8 +12,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img className="logo-img" src={Logo} alt="Urban Craft Logo" />
-
+      <div>
+        <img className="logo-img" src={Logo} alt="Urban Craft Logo" />
+      </div>
       {/* Show the hamburger menu only on small screens */}
       <button
         aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -27,11 +28,10 @@ const Navbar = () => {
 
       {/* Navigation links for large screens */}
       <div
-        className={`nav-links-container ${
-          isOpen ? "nav-links-container-open" : ""
-        }`}
+        className={`nav-links-container ${isOpen ? "nav-links-container-open" : ""
+          }`}
       >
-        <Link className="nav-link" to="/about">
+        <Link className="nav-link" to="/AboutUs">
           About us
         </Link>
         <Link className="nav-link" to="/contact">

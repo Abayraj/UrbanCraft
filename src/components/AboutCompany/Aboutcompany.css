@@ -14,6 +14,7 @@
     aspect-ratio: 16/15;
     width: 470px;
     height: 500px;
+    object-fit: cover;
 
 }
 .company-info{
