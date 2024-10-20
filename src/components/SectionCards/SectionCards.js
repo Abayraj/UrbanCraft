@@ -53,7 +53,7 @@ const SectionCards = () => {
             <SwiperSlide key={index}>
              <Link to="/Details" state={{ someData: { title: card.title, description: card.description } }}>
                 <figure className="img-container">
-                  <img src={card.image.default} alt={card.title} className="card_image" /> {/* Add class here */}
+                  <img src={card.image.default} alt={card.title} className="card_image" />
                   <figcaption>{card.title}</figcaption>
                 </figure>
               </Link>

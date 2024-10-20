@@ -64,4 +64,4 @@ const AboutCompany = () => {
   )
 }
 
-export default AboutCompany
+export default AboutCompany;

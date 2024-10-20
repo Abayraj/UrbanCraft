@@ -30,12 +30,14 @@
     font-weight: normal;
     font-size: 1.3rem;
     margin-bottom: 0;
+    
 }
 .company-info h2{
     font-weight: bolder;
     font-size: 3rem;
     margin-top: 10px;
     font-family: "Be Vietnam Pro", sans-serif;
+    color: black;
 }
 
 .img-contianer{
