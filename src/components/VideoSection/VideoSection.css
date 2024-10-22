@@ -69,9 +69,3 @@
   .mute-button:hover {
     color:black;
   }
-  
-  /* Hide default video controls */
-  /* video::-webkit-media-controls {
-    display: none !important;
-  }
-   */

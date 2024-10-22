@@ -5,15 +5,14 @@ import { motion } from 'framer-motion'; // Import Framer Motion
 import './AboutUs.css';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import Nav from "../components/Navbar/nav";
 import aboutUsData from '../constants/aboutUsData'; // Adjust the import path as necessary
 import wash from '../asset/images/About_us/hand.svg'
 import home from '../asset/images/About_us/home.svg'
 import waste_mangaement from '../asset/images/About_us/waste_mangaement.svg'
 import prefab from '../asset/images/About_us/prefab.svg'
+import logo from '../asset/images/urbancraft_logo_black.png'
 
 const AboutUs = () => {
-  // Motion variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 5.5 } },
@@ -27,7 +26,6 @@ const AboutUs = () => {
 
   return (
     <>
-      <Nav />
       <main>
         <section className='about-us-sectionone-container'>
           <motion.div
@@ -36,8 +34,9 @@ const AboutUs = () => {
             initial="hidden"
             animate="visible"
           >
+            <img className='logo' src={logo} alt=''/>
             <h1>About Us</h1>
-            <p>{aboutUsData.aboutUs.introText}</p>
+            {/* <p>{aboutUsData.aboutUs.introText}</p> */}
           </motion.div>
         </section>
         <section className='section-two-wrapper'>
@@ -109,7 +108,7 @@ const AboutUs = () => {
             <div className='section-third-card'>
               <img src={wash} alt='' />
               <div className='card'>
-                <h4>Sustainable Washroom Solutions</h4>
+                <h4>Sustainable Washrooms</h4>
                 <p>
                   We tackle common washroom problems with cutting-edge designs that prioritize hygiene,
                   water conservation, and energy efficiency.
