@@ -1,16 +1,20 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import './AboutUs.css';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import aboutUsData from '../constants/aboutUsData'; // Adjust the import path as necessary
+import aboutUsData from '../constants/aboutUsData';
 import wash from '../asset/images/About_us/hand.svg'
 import home from '../asset/images/About_us/home.svg'
+import container from '../asset/images/About_us/black_container.jpeg'
 import waste_mangaement from '../asset/images/About_us/waste_mangaement.svg'
 import prefab from '../asset/images/About_us/prefab.svg'
 import logo from '../asset/images/urbancraft_logo_black.png'
+import Footer from '../components/Footer/Footer';
+import ContactUs from '../components/ContactUs/ContactUs';
+
 
 const AboutUs = () => {
   const containerVariants = {
@@ -34,7 +38,7 @@ const AboutUs = () => {
             initial="hidden"
             animate="visible"
           >
-            <img className='logo' src={logo} alt=''/>
+            <img className='logo' src={logo} alt='' />
             <h1>About Us</h1>
             {/* <p>{aboutUsData.aboutUs.introText}</p> */}
           </motion.div>
@@ -95,18 +99,30 @@ const AboutUs = () => {
         </section>
         <section className='section-third-wrapper'>
           <div className='section-third-left-text'>
-            <h2>OUR VISION</h2>
-            <p>
+            <motion.h2
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+              viewport={{ once: false }}
+            >OUR VISION</motion.h2>
+            <motion.p
+                   initial={{ opacity: 0, x: 50 }}
+                   whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+                   viewport={{ once: false }}
+            >
               Urbancraft Alliance India is an innovative startup at the forefront of sustainable living solutions.
               With a focus on modernizing washroom experiences and creating eco-friendly portable homes, we are
               committed to addressing pressing environmental challenges while enhancing the quality of life for
               our customers.
-            </p>
+            </motion.p>
             <button className='btn-cu'>Contact Us</button>
           </div>
           <div className='section-third-card-wrapper'>
-            <div className='section-third-card'>
-              <img src={wash} alt='' />
+            <motion.div className='section-third-card'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
+              viewport={{ once: false }}
+            >
+              <img src={wash} alt='hand-image' />
               <div className='card'>
                 <h4>Sustainable Washrooms</h4>
                 <p>
@@ -114,9 +130,13 @@ const AboutUs = () => {
                   water conservation, and energy efficiency.
                 </p>
               </div>
-            </div>
-            <div className='section-third-card'>
-              <img src={home} alt='' />
+            </motion.div>
+            <motion.div className='section-third-card'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
+              viewport={{ once: false }}
+            >
+              <img src={home} alt='home-image' />
               <div className='card'>
                 <h4>Container Homes</h4>
                 <p>
@@ -124,9 +144,13 @@ const AboutUs = () => {
                   container homes that are cost-effective and quick to assemble.
                 </p>
               </div>
-            </div>
-            <div className='section-third-card'>
-              <img src={prefab} alt='' />
+            </motion.div>
+            <motion.div className='section-third-card'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
+              viewport={{ once: false }}
+            >
+              <img src={prefab} alt='prefab-home' />
               <div className='card'>
                 <h4>Prefab Structures</h4>
                 <p>
@@ -134,9 +158,13 @@ const AboutUs = () => {
                   while providing flexibility in design.
                 </p>
               </div>
-            </div>
-            <div className='section-third-card'>
-              <img src={waste_mangaement} alt='' />
+            </motion.div>
+            <motion.div className='section-third-card' 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
+              viewport={{ once: false }}
+            >
+              <img src={waste_mangaement} alt='waste-management-image' />
               <div className='card'>
                 <h4>Waste Management & Sanitation</h4>
                 <p>
@@ -144,12 +172,30 @@ const AboutUs = () => {
                   through innovative solutions.
                 </p>
               </div>
-
-            </div>
-
+            </motion.div>
           </div>
         </section>
+        <section className='section-fourth-wrapper'>
+          <div>
+            <h2>Join Us on Our Journey</h2>
+            <p>
+              At Urbancraft Alliance India, we’re more than a company—we’re a movement toward a sustainable future. Whether you’re an individual, family, or business, we invite you to explore our innovative solutions and join us in making a lasting difference for the planet.
+            </p>
+          </div>
+          <div className='img-container'>
+            <img className='container-img' src={container} alt='container-home' />
+            <div className='img-text'>
+              <blockquote>
+                <p>Whatever good things we build end up building us.</p>
+                <footer class="author-name">— Jim Rohn</footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
       </main>
+      <ContactUs />
+      <Footer />
     </>
   );
 };

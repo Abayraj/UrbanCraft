@@ -9,6 +9,7 @@ import Aboutcompany from '../components/AboutCompany/Aboutcompany';
 import OurService from "../components/OurService/OurService.js"
 import VideoSection from '../components/VideoSection/VideoSection.js';
 import"./index.css"
+import ContactUs from '../components/ContactUs/ContactUs.js';
 
 
 const IndexPage = () => { 
@@ -23,6 +24,7 @@ const IndexPage = () => {
         <AdvantageSection/> 
         <Aboutcompany />
         <OurService/>
+        <ContactUs />
         <Footer/>
       </main>
 

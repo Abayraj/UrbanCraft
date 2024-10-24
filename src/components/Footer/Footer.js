@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from "/src/asset/images/urbancraft_logo.png"
 import facebook from "/src/asset/images/Footer/facebook.svg"
 import whatsapp from "/src/asset/images/Footer/whatsapp.svg"
 import instagram from "/src/asset/images/Footer/instagram.svg"
@@ -10,10 +9,10 @@ const Footer = () => {
   return (
     <footer className='footer-wrapper'>
       <div className='left-logo-container'>
-        <h2 className='footer-left-text'>Your vision our foundation<br/>UrbanCraft</h2>
+        <h2 className='footer-left-text'>Your goals our mission<br/>UrbanCraft</h2>
       </div>
       <div className='right-side-wrapper'>
-      <p className='contact-us'>Contact Us</p>
+      <p className='contact-us'>Connect with Us</p>
         <div className='icons-right-container'>
           <div className='icons-cricle'>
             <img src={instagram} alt='instagram' />

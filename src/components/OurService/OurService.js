@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./OurService.css";
-import ServiceImage from "/src/asset/images/builders.jpg";
+import ServiceImage from "/src/asset/images/workers_image.jpeg";
 import ArrowUp from "/src/asset/images/arrow_up.svg";
 import ArrowDown from "/src/asset/images/arrow_down.svg";
 import faqs from "../../constants/faqs";
 import { motion } from "framer-motion";
 
 const OurService = () => {
-    // State to toggle the open/close state of each accordion
     const [open, setOpen] = useState(-1);
 
     return (
@@ -26,7 +25,7 @@ const OurService = () => {
                 <aside className="side-content">
                     <h3>Construction of All Kinds of Houses</h3>
                     <p>
-                        We offer a wide range of construction services, including house construction, prefab structures, cafe construction, container homes, office refurbishment, commercial construction, renovation and remodeling, site development, infrastructure projects, and interior design. Whether you need to build a new home, create an inviting cafe, or revamp your office space, our team is equipped to deliver exceptional quality and results tailored to your needs.
+                    From constructing modern homes and innovative container structures to transforming commercial spaces and refurbishing offices, our expertise spans across a variety of construction services. Whether you envision a new home, a stylish café, or a refreshed workspace, our skilled team delivers tailored solutions with unmatched quality and craftsmanship, ensuring your project's success
                     </p>
                     <ul className="styled-list">
                         <li>Prefab Construction Homes</li>
@@ -36,7 +35,6 @@ const OurService = () => {
                         <li>Design Services</li>
                         <li>Cafe and Restaurant Construction</li>
                     </ul>
-                    {/* Accordion Section for Q&A */}
                     <section className="accordion-wrapper">
                         <h1>Frequently Asked Questions?</h1>
                         {faqs.map((data, index) => (

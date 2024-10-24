@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
 
-/* Section Styles */
 .section-two {
     padding: 50px 20px;
     background: white;
@@ -31,7 +30,6 @@
     color: black;
 }
 
-/* Card Styles */
 .img-container {
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -48,7 +46,6 @@
   
 }
 
-/* Swiper Styles */
 .cards-wrapper {
     padding: 105px;
 }
@@ -79,7 +76,6 @@
     text-align: center;
 }
 
-/* Breakpoints for smaller screens */
 @media only screen and (max-width: 1024px) {
     .header-wrapper-second-section h2 {
         font-size: 2rem;
@@ -115,7 +111,7 @@
 
 @media only screen and (max-width: 375px) {
     .section-two .header-wrapper-second-section h2 {
-        font-size: 3.3rem;
+        font-size: 2.6rem;
         color: black;
         font-weight: 900;
         font-family: "Be Vietnam Pro", sans-serif;
@@ -148,5 +144,14 @@
         font-weight: 400;
         color: rgb(199, 22, 22);
         margin-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 320px) {
+
+    .section-two .header-wrapper-second-section h2{
+        font-size: 2rem;
+    }
+    .header-wrapper-second-section p {
+        font-size: 1.1rem;
     }
 }
