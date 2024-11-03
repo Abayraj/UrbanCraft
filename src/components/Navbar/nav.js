@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <nav>
       <div>
+      <Link to="/">
         <img className="logo-img" src={Logo} alt="Urban Craft Logo" />
+        </Link>
       </div>
       {/* Show the hamburger menu only on small screens */}
       <button
@@ -37,7 +39,7 @@ const Navbar = () => {
         <Link className="nav-link" to="/contact">
           Contact
         </Link>
-        <Link className="nav-link" to="/services">
+        <Link className="nav-link" to="#construction-services">
           Services
         </Link>
       </div>

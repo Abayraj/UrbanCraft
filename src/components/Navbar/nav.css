@@ -15,10 +15,9 @@ nav {
   .logo-img{
     height: 450px;
     padding-top: 18px;
-    object-fit: cover;
+    object-fit:fill;
   }
-  
-  /* Default navigation links styles */
+
   .nav-links-container {
     display: flex;
     gap: 20px;

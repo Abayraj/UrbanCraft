@@ -12,7 +12,7 @@ module.exports = {
     title: `UrbanCraft`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://theurbancraftindia.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `theurbancraftindia`,
+        short_name: `urbancraft`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website

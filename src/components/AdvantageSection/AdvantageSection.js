@@ -39,7 +39,7 @@ const AdvantageSection = () => {
                                 duration: 3,
                             },
                         }}
-                    >Providing The Best Service To Build Your Dream</motion.h3>
+                    >Providing The Best Service<br/>To Build Your Dream</motion.h3>
                 </div>
             </div>
             <div className="adv-cards-wrapper">
@@ -83,7 +83,7 @@ const AdvantageSection = () => {
                     </div>
                     <div className="adv-text">
                         <h2>Guaranteed Quality</h2>
-                        <p>"With expert precision and attention to detail, our workers ensure that every project is completed to the highest quality standards."</p>
+                        <p>"With expert precision and attention to detail<br/>our workers ensure that every project is completed to the highest quality standards."</p>
                     </div>
                 </div>
                 <div className="adv-cards">
@@ -104,7 +104,7 @@ const AdvantageSection = () => {
                     </div>
                     <div className="adv-text">
                         <h2>Experienced Craftsmanship</h2>
-                        <p>"Leveraging their expertise and dedication, our workers consistently provide reliable, flawless results on every project."</p>
+                        <p>"Leveraging their expertise and dedication,<br/> our workers consistently provide reliable, flawless results on every project."</p>
                     </div>
                 </div>
             </div>

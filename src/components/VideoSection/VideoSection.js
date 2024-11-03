@@ -49,33 +49,32 @@ const VideoSection = () => {
         }
     };
 
-    const handleVideoClick = () => {
-        togglePlay(); // Pause or play the video when clicked
+    const handleVideoClick = (event) => {
+        togglePlay();
+        if (event.key === 'Enter' || event.key === ' ') {
+            togglePlay();
+        }
     };
 
     const handleVideoEnded = () => {
         const video = document.getElementById('videoElement');
         if (video) {
-            video.currentTime = 0; // Reset to the start
-            video.play(); // Play again
-            setIsPlaying(true); // Update play state
+            video.currentTime = 0; 
+            video.play(); 
+            setIsPlaying(true);
         }
     };
     const getTextStyle = () => {
-        // Screen width breakpoints
         const isMobile = screenWidth < 768;
         const isTablet = screenWidth >= 768 && screenWidth < 1200;
-    
-        // Early return to hide text after 31 seconds
         if (currentTime >= 31) {
             return { display: 'none' };
         }
     
-        // Define default styles
+        
         let fontSize;
-        let color = 'white';  // Since 'white' is used in all conditions
+        let color = 'white';  
     
-        // Font size logic based on currentTime and screen width
         if (currentTime >= 0 && currentTime < 4) {
             fontSize = isMobile ? '40px' : isTablet ? '80px' : '100px';
         } else if (currentTime >= 5 && currentTime < 10) {
@@ -100,21 +99,21 @@ const VideoSection = () => {
                 id="videoElement"
                 className="responsive-video"
                 onTimeUpdate={handleTimeUpdate}
-                onEnded={handleVideoEnded} // Loop the video
-                onClick={handleVideoClick} // Pause/play on click
+                onEnded={handleVideoEnded} 
+                onClick={handleVideoClick} 
             >
                 <source src={Video} type="video/mp4" />
                 Your browser does not support the video tag.
+                
             </video>
 
-            {/* Custom Play Button */}
+            
             {!isPlaying && (
                 <button className="play-button" onClick={togglePlay}>
                     <img src={PlayIcon} alt='play'/>
                 </button>
             )}
 
-            {/* Dynamic Text based on video time */}
             <div
              className="dynamic-text" style={getTextStyle()}>
                 {currentTime < 4 && 'URBANCRAFT'}
@@ -130,9 +129,6 @@ const VideoSection = () => {
     )} 
              
             </div>
-
-
-            {/* Mute/Unmute Button */}
             <button className="mute-button" onClick={toggleMute}>
                 {isMuted ? <img src={Mute} alt='mute'/> : <img src={UnMute} alt='unmute'/> }
             </button>
@@ -141,4 +137,5 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
+
 

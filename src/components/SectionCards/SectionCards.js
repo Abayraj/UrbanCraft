@@ -1,33 +1,16 @@
+// src/components/SectionCards.js
 import React from 'react';
+import './secondsectionCards.css';
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { Link } from 'gatsby';
-import cardData from '../../constants/cardData'; // Make sure the path is correct
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import './secondsectionCards.css';
+import cardData from '../../constants/cardData';
+
 
 const SectionCards = () => {
   return (
     <section className="section-two">
-      <header className="header-wrapper-second-section">
-        <motion.h2
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-          viewport={{ once: false }}
-        >
-          UrbanCraft Expert Insights on Innovative Building Solutions
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-          viewport={{ once: false }}
-        >
-          Join us as we explore the transformative world of construction solutions. Gain valuable knowledge from industry experts and discover best practices that can elevate your projects across India.
-        </motion.p>
-      </header>
-
       <section className="cards-wrapper">
         <div className='what-offer'>
           <motion.h1
@@ -37,7 +20,7 @@ const SectionCards = () => {
             What We Bring to You
           </motion.h1>
         </div>
-        
+
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -51,9 +34,9 @@ const SectionCards = () => {
         >
           {cardData.map((card, index) => (
             <SwiperSlide key={index}>
-             <Link to="/Details" state={{ someData: { title: card.title, description: card.description } }}>
+             <Link key={index} to={`/details/${card.slug}`}>
                 <figure className="img-container">
-                  <img src={card.image.default} alt={card.title} className="card_image" />
+                  <img src={card.image} alt={card.title} className="card_image" />
                   <figcaption>{card.title}</figcaption>
                 </figure>
               </Link>
@@ -66,5 +49,3 @@ const SectionCards = () => {
 };
 
 export default SectionCards;
-
-

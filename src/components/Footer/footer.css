@@ -40,7 +40,9 @@
     align-items: center;
     justify-content: center; 
     cursor: pointer;
-    transition: transform 0.3s ease
+    transition: transform 0.3s ease;
+    border: none;
+   
 }
 
 .icons-right-container img {

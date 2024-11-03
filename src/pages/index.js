@@ -27,11 +27,7 @@ const IndexPage = () => {
         <ContactUs />
         <Footer/>
       </main>
-
-      <CustomCursor />
-    
-
-
+      <CustomCursor/>
     </div>
   );
 };

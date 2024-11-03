@@ -1,10 +1,8 @@
 import React from 'react';
+import './AboutUs.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
-import './AboutUs.css';
-import 'swiper/css';
-import 'swiper/css/autoplay';
 import aboutUsData from '../constants/aboutUsData';
 import wash from '../asset/images/About_us/hand.svg'
 import home from '../asset/images/About_us/home.svg'
@@ -14,39 +12,34 @@ import prefab from '../asset/images/About_us/prefab.svg'
 import logo from '../asset/images/urbancraft_logo_black.png'
 import Footer from '../components/Footer/Footer';
 import ContactUs from '../components/ContactUs/ContactUs';
+import { Link } from 'gatsby';
 
 
 const AboutUs = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 5.5 } },
+  const whatsappNumber = '918129284448';
+  const message = 'Hello Urban Craft! I’m interested in learning more about your eco-friendly building solutions.';
+  const handleWhatsAppRedirect = () => {
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
-
-  const slideVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 3.5 } },
-    exit: { opacity: 0, scale: 0.95, transition: { duration: 0.5 } },
-  };
-
   return (
     <>
       <main>
         <section className='about-us-sectionone-container'>
-          <motion.div
+          <div
             className='section-one-text'
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
           >
-            <img className='logo' src={logo} alt='' />
+            <Link to="/">
+              <img className='logo' src={logo} alt='' />
+            </Link>
             <h1>About Us</h1>
             {/* <p>{aboutUsData.aboutUs.introText}</p> */}
-          </motion.div>
+          </div>
         </section>
         <section className='section-two-wrapper'>
           <Swiper
             modules={[Autoplay]}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 2000 }}
             loop={true}
             className='mySwiper'
           >
@@ -54,43 +47,26 @@ const AboutUs = () => {
               <SwiperSlide key={index}>
                 <motion.div
                   className='section-two-item-wrapper'
-                  variants={slideVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+                  viewport={{ once: false }}
                 >
                   <div className='img-container'>
                     <img className='section-two-img' src={section.image} alt={section.title} />
                   </div>
                   <div className='section-two-text-container'>
-                    <motion.h4
-                      variants={containerVariants}
-                      initial="hidden"
-                      animate="visible"
-                    >
+                    <h4>
                       {section.title}
-                    </motion.h4>
-                    <motion.h2
-                      variants={containerVariants}
-                      initial="hidden"
-                      animate="visible"
-                    >
+                    </h4>
+                    <h2>
                       {section.subtitle}
-                    </motion.h2>
-                    <motion.p
-                      variants={containerVariants}
-                      initial="hidden"
-                      animate="visible"
-                    >
+                    </h2>
+                    <p>
                       {section.text}
-                    </motion.p>
-                    <motion.button
-                      variants={containerVariants}
-                      initial="hidden"
-                      animate="visible"
-                    >
+                    </p>
+                    <button>
                       {section.buttonText}
-                    </motion.button>
+                    </button>
                   </div>
                 </motion.div>
               </SwiperSlide>
@@ -98,24 +74,26 @@ const AboutUs = () => {
           </Swiper>
         </section>
         <section className='section-third-wrapper'>
-          <div className='section-third-left-text'>
-            <motion.h2
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-              viewport={{ once: false }}
-            >OUR VISION</motion.h2>
-            <motion.p
-                   initial={{ opacity: 0, x: 50 }}
-                   whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
-                   viewport={{ once: false }}
-            >
-              Urbancraft Alliance India is an innovative startup at the forefront of sustainable living solutions.
-              With a focus on modernizing washroom experiences and creating eco-friendly portable homes, we are
-              committed to addressing pressing environmental challenges while enhancing the quality of life for
-              our customers.
-            </motion.p>
-            <button className='btn-cu'>Contact Us</button>
-          </div>
+          <motion.div className='section-third-left-text'
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+            viewport={{ once: false }}
+          >
+            <h2
+
+            >OUR MISSION</h2>
+            <p>
+              Urbancraft Alliance India is an innovative startup
+              dedicated to revolutionizing sustainable living
+              through modernized washroom experiences, eco-
+              friendly portable homes, and prefab construction
+              solutions. Our unique blend of technology and
+              design aims to enhance everyday living while
+              tackling critical environmental challenges, making
+              us a forward-thinking leader in sustainable living.
+            </p>
+            <button onClick={handleWhatsAppRedirect} className='btn-cu'>Contact Us</button>
+          </motion.div>
           <div className='section-third-card-wrapper'>
             <motion.div className='section-third-card'
               initial={{ opacity: 0, y: 50 }}
@@ -159,7 +137,7 @@ const AboutUs = () => {
                 </p>
               </div>
             </motion.div>
-            <motion.div className='section-third-card' 
+            <motion.div className='section-third-card'
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
               viewport={{ once: false }}
@@ -176,20 +154,32 @@ const AboutUs = () => {
           </div>
         </section>
         <section className='section-fourth-wrapper'>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+            viewport={{ once: false }}
+          >
             <h2>Join Us on Our Journey</h2>
             <p>
               At Urbancraft Alliance India, we’re more than a company—we’re a movement toward a sustainable future. Whether you’re an individual, family, or business, we invite you to explore our innovative solutions and join us in making a lasting difference for the planet.
             </p>
-          </div>
+          </motion.div>
           <div className='img-container'>
             <img className='container-img' src={container} alt='container-home' />
-            <div className='img-text'>
-              <blockquote>
+            <motion.div className='img-text'
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0, transition: { duration: 4 } }}
+              viewport={{ once: false }}
+            >
+              <motion.blockquote
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+                viewport={{ once: false }}
+              >
                 <p>Whatever good things we build end up building us.</p>
                 <footer class="author-name">— Jim Rohn</footer>
-              </blockquote>
-            </div>
+              </motion.blockquote>
+            </motion.div>
           </div>
         </section>
 
