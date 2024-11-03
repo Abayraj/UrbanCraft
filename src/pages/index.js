@@ -1,8 +1,7 @@
 import React from 'react';
 import Nav from '../components/Navbar/nav';
 import Footer from '../components/Footer/Footer.js'
-// import SecondSection from '../components/SectionSecond/Secondsection'
-import Secondsection from '../components/SectionCards/SectionCards';
+import SecondCards from '../components/SectionCards/SectionCards.js'
 import CustomCursor from '../components/CustomCursor/CustomCursor';
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection.js';
 import Aboutcompany from '../components/AboutCompany/Aboutcompany';
@@ -20,7 +19,7 @@ const IndexPage = () => {
       </header>
       <main>
         <VideoSection/>
-        <Secondsection />
+      <SecondCards/>
         <AdvantageSection/> 
         <Aboutcompany />
         <OurService/>

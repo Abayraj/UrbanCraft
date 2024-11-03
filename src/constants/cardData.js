@@ -14,6 +14,12 @@ import PortabaleToilet3 from "../asset/images/card_items_details_images/containe
 import WashRoom1 from "../asset/images/card_items_details_images/wash_room.png"
 import WashRoom2 from "../asset/images/card_items_details_images/washroom_2.jpeg"
 import WashRoom3 from "../asset/images/card_items_details_images/wash_room_white.jpeg"
+import WashRoom4 from "../asset/images/card_items_details_images/washroom4.jpeg"
+import ContianerHome1 from "../asset/images/card_items_details_images/container_home1.jpeg"
+import ContainerHome2 from "../asset/images/card_items_details_images/container_home2.jpeg"
+import WashRoomVideo1 from "../asset/video/wash_room.mp4"
+import WashRoomVideo2 from "../asset/video/wash_room2.mp4"
+
 
 
 const cardData = [
@@ -63,9 +69,9 @@ const cardData = [
     description: "Modern, eco-friendly container homes designed for sustainable living. These homes offer a perfect blend of style, functionality, and sustainability, ideal for urban and remote environments alike.",
     image: containerHomeImage,
     images: [
-      washRoomImage,
-      kitchenImage,
-      containerHomeImage
+      ContianerHome1,
+      ContainerHome2,
+      containerHomeImage,
     ],
     link: "/details",
     slug: "container-homes",
@@ -83,9 +89,16 @@ const cardData = [
     image:  washRoomImage,
     images: [
       WashRoom1,
-      washRoomImage,
       WashRoom2,
-      WashRoom3
+      WashRoom4,
+      WashRoom3,
+    
+    ],
+    videos:[
+      WashRoomVideo2,
+      WashRoomVideo1,
+  
+
     ],
     link: "/details",
     slug: "modern-washrooms",

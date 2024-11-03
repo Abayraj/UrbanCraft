@@ -11,6 +11,22 @@ import cardData from '../../constants/cardData';
 const SectionCards = () => {
   return (
     <section className="section-two">
+      <header className="header-wrapper-second-section">
+        <motion.h2
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+          viewport={{ once: false }}
+        >
+          UrbanCraft Expert Insights on Innovative Building Solutions
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0, transition: { duration: 3 } }}
+          viewport={{ once: false }}
+        >
+          Join us as we explore the transformative world of construction solutions. Gain valuable knowledge from industry experts and discover best practices that can elevate your projects across India.
+        </motion.p>
+      </header>
       <section className="cards-wrapper">
         <div className='what-offer'>
           <motion.h1

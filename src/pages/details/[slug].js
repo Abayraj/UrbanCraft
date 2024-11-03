@@ -3,24 +3,22 @@ import cardData from '../../constants/cardData';
 import '../details/slug.css';
 import Nav from './../../components/Navbar/nav';
 import Footer from '../../components/Footer/Footer';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper components
-import { Autoplay } from 'swiper/modules'; // Import the Autoplay module
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Autoplay } from 'swiper/modules'; 
 
-// Don't forget to import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import ContactUs from '../../components/ContactUs/ContactUs';
 
 const Details = ({ params }) => {
-    const { slug } = params; // Extract slug from URL params
-    console.log(slug, "slugg");
-
-    // Find the specific card data based on the slug
+    const { slug } = params;
+  
     const selectedCard = cardData.find(card => card.slug === slug);
     console.log(selectedCard);
 
     if (!selectedCard) {
-        return <p>Card not found</p>; // Handle case if slug doesn't match any card
+        return <p>Card not found</p>; 
     }
 
     return (
@@ -38,14 +36,13 @@ const Details = ({ params }) => {
                     </ul>
                 </div>
                 <div className='image-wrapper'>
-                    {/* Swiper for images */}
                     <Swiper
-                        modules={[Autoplay]} // Enable Autoplay module
+                        modules={[Autoplay]}
                         spaceBetween={0}
                         slidesPerView={1}
-                        autoplay={{ delay: 2500, disableOnInteraction: false }} // Set autoplay options
-                        speed={1500} // Set transition speed in milliseconds for smooth effect
-                        loop={true} // Enable looping for seamless transitions
+                        autoplay={{ delay: 2500, disableOnInteraction: false }} 
+                        speed={1500}
+                        loop={true} 
                     >
                         {selectedCard.images.map((image, index) => (
                             <SwiperSlide key={index}>
@@ -55,11 +52,42 @@ const Details = ({ params }) => {
                     </Swiper>
                 </div>
             </section>
-            
-            {/* Details Section */}
-            <section className='details-section'>
-                <p>{selectedCard.details}</p> {/* Assuming details are in your data */}
-            </section>
+            {slug === 'modern-washrooms' && selectedCard.videos && (
+                <>
+                    <section className='details-section'>
+                        {selectedCard.videos.length > 0 && (
+                            <>
+                                <div key={0}>
+                                    <video className='details-video' src={selectedCard.videos[0]} type="video/mp4"  autoPlay muted loop />
+
+                                </div>
+                                <div>
+                                    <h1 className='video-side-text'>Take a Closer Look<br className="line-break"/> at Our Stunning Washroom Designs!</h1>
+                                </div>
+
+                            </>
+                        )}
+                    </section>
+                    <section className='details-section-2'>
+                        {selectedCard.videos.length > 0 && (
+                            <>
+                                <div key={1}> 
+                                    <video className='details-video'
+                                     src={selectedCard.videos[1]} type="video/mp4" autoPlay muted loop/>
+
+                                </div>
+                                <div>
+                               <h1 className='video-side-text'>Explore the Elegance<br className="line-break"/> of Modern Washroom Designs!</h1>
+                                </div>
+
+                            </>
+                        )}
+
+                    </section>
+                </>
+
+            )}
+
             <ContactUs />
             <Footer />
         </>
@@ -67,3 +95,4 @@ const Details = ({ params }) => {
 };
 
 export default Details;
+
