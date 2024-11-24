@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import "./nav.css"
-import Logo from "/src/asset/images/urbancraft_logo.png"
+import Logo from '/src/asset/images/urbancraft_logo_black.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,12 +12,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div>
       <Link to="/">
         <img className="logo-img" src={Logo} alt="Urban Craft Logo" />
-        </Link>
-      </div>
-      {/* Show the hamburger menu only on small screens */}
+      </Link>
       <button
         aria-label={isOpen ? "Close menu" : "Open menu"}
         className="hamburger-menu"
@@ -36,7 +33,7 @@ const Navbar = () => {
         <Link className="nav-link" to="/AboutUs">
           About us
         </Link>
-        <Link className="nav-link" to="/contact">
+        <Link className="nav-link" to="#contact-us">
           Contact
         </Link>
         <Link className="nav-link" to="#construction-services">

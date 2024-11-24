@@ -39,7 +39,7 @@ const AboutUs = () => {
         <section className='section-two-wrapper'>
           <Swiper
             modules={[Autoplay]}
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 4000 }}
             loop={true}
             className='mySwiper'
           >

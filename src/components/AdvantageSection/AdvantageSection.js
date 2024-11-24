@@ -45,7 +45,7 @@ const AdvantageSection = () => {
             <div className="adv-cards-wrapper">
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                        <motion.img src={FirstImage} alt=""
+                        <motion.img src={FirstImage} alt="Professional Workers"
                             initial={{
                                 opacity: 0,
                                 x: 30,
@@ -67,7 +67,7 @@ const AdvantageSection = () => {
                 </div>
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                        <motion.img src={SecondImage} alt="" 
+                        <motion.img src={SecondImage} alt="Guaranteed Quality" 
                                  initial={{
                                     opacity: 0,
                                     y: 30,
@@ -88,7 +88,7 @@ const AdvantageSection = () => {
                 </div>
                 <div className="adv-cards">
                     <div className="adv-cards-img-container">
-                        <motion.img src={ThirdImage} alt=""
+                        <motion.img src={ThirdImage} alt="Experienced Craftsmanship"
                             initial={{
                                 opacity: 0,
                                 x: 30,

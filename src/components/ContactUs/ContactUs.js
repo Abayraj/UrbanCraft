@@ -10,7 +10,7 @@ const ContactUs = () => {
         window.open(url, '_blank');
     };
     return (
-        <section className='contact-us-wrapper'>
+        <section className='contact-us-wrapper' id='contact-us'>
             <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}

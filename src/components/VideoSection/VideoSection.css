@@ -56,7 +56,7 @@
   /* Mute button in the top-right corner */
   .mute-button {
     position: absolute;
-    top: 20px;
+    top: 100px;
     right: 20px;
     width: 100px;
     background-color: rgba(0, 0, 0, 0);
