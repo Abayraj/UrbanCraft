@@ -4,6 +4,7 @@ import Video from '/src/asset/video/urbancraft.mp4';
 import PlayIcon from '/src/asset/video/play_arrow.svg';
 import Mute from '/src/asset/video/mute.svg';
 import UnMute from '/src/asset/video/unmute.svg';
+// import Nav from '../Navbar/nav'
 
 
 
@@ -95,6 +96,7 @@ const VideoSection = () => {
 
     return (
         <div className="video-container">
+       
             <video
                 id="videoElement"
                 className="responsive-video"
