@@ -76,7 +76,7 @@ const Footer = () => {
         >
           <p>&copy; {new Date().getFullYear()} UrbanCraft. All rights reserved.</p>
           <p>Image by <a  rel="noopener noreferrer" href="https://www.freepik.com" target="_blank">Freepik</a></p>
-          <p>Email: info@urbancraft.com</p>
+          <p>Email: info@theurbancraftindia.com</p>
         </motion.div>
       </div>
     </footer>
