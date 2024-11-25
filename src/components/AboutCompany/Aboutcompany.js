@@ -22,7 +22,7 @@ const AboutCompany = () => {
                   whileInView={{ opacity: 1, y: 0, transition: { duration: 4 } }}
                   viewport={{ once: false }}
           >
-            <img className="img-box-black" src={LogoIcon} />
+            <img className="img-box-black" alt="black-box" src={LogoIcon} />
           </motion.div>
           <motion.div className="img-box-white"
              initial={{ opacity: 0, x: 200 }}
