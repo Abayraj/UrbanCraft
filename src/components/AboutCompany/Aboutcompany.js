@@ -16,6 +16,7 @@ const AboutCompany = () => {
             src={AboutusImg}
             alt="About us - Company overview"
             className="about-company-img"
+            loading="lazy"
           />
           <motion.div className="img-box"
                   initial={{ opacity: 0, y: 200 }}

@@ -42,7 +42,7 @@ const OurService = () => {
                         We offer a wide range of construction services, including house construction, prefab structures, cafe construction, container homes, office refurbishment, commercial construction, renovation and remodeling, site development, infrastructure projects,<br /> and interior design. Whether you need to build a new home, create an inviting cafe, or revamp your office space, our team is equipped to deliver exceptional quality and results tailored to your needs.
                     </p>
                     <button>Contact Us</button>
-                    <img src={ServiceImage} alt="Construction Services" />
+                    <img loading="lazy" src={ServiceImage} alt="Construction Services" />
                 </motion.article>
                 <aside className="side-content">
                     <h3>Innovative Customizable Construction Solutions</h3>

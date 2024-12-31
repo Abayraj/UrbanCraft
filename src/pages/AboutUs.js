@@ -30,7 +30,7 @@ const AboutUs = () => {
             className='section-one-text'
           >
             <Link to="/">
-              <img className='logo' src={logo} alt='' />
+              <img className='logo' src={logo} alt='' loading="lazy"/>
             </Link>
             <h1>About Us</h1>
             {/* <p>{aboutUsData.aboutUs.introText}</p> */}
@@ -52,7 +52,7 @@ const AboutUs = () => {
                   viewport={{ once: false }}
                 >
                   <div className='img-container'>
-                    <img className='section-two-img' src={section.image} alt={section.title} />
+                    <img className='section-two-img' src={section.image} alt={section.title} loading="lazy"/>
                   </div>
                   <div className='section-two-text-container'>
                     <h4>
@@ -100,7 +100,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
               viewport={{ once: false }}
             >
-              <img src={wash} alt='hand-image' />
+              <img src={wash} alt='hand-image' loading="lazy"/>
               <div className='card'>
                 <h4>Sustainable Washrooms</h4>
                 <p>
@@ -114,7 +114,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
               viewport={{ once: false }}
             >
-              <img src={home} alt='home-image' />
+              <img src={home} alt='home-image' loading="lazy"/>
               <div className='card'>
                 <h4>Container Homes</h4>
                 <p>
@@ -128,7 +128,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
               viewport={{ once: false }}
             >
-              <img src={prefab} alt='prefab-home' />
+              <img src={prefab} alt='prefab-home' loading="lazy"/>
               <div className='card'>
                 <h4>Prefab Structures</h4>
                 <p>
@@ -142,7 +142,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 3 } }}
               viewport={{ once: false }}
             >
-              <img src={waste_mangaement} alt='waste-management-image' />
+              <img src={waste_mangaement} alt='waste-management-image' loading="lazy"/>
               <div className='card'>
                 <h4>Waste Management & Sanitation</h4>
                 <p>
@@ -165,7 +165,7 @@ const AboutUs = () => {
             </p>
           </motion.div>
           <div className='img-container'>
-            <img className='container-img' src={container} alt='container-home' />
+            <img className='container-img' src={container} alt='container-home' loading="lazy"/>
             <motion.div className='img-text'
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 4 } }}

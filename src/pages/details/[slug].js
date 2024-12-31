@@ -46,7 +46,7 @@ const Details = ({ params }) => {
                     >
                         {selectedCard.images.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <img src={image} alt={`${selectedCard.title} - ${index}`} />
+                                <img src={image} loading="lazy" alt={`${selectedCard.title} - ${index}`} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
