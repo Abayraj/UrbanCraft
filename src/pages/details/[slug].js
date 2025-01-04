@@ -15,7 +15,6 @@ const Details = ({ params }) => {
     const { slug } = params;
   
     const selectedCard = cardData.find(card => card.slug === slug);
-    console.log(selectedCard);
 
     if (!selectedCard) {
         return <p>Card not found</p>; 

@@ -17,6 +17,8 @@ import WashRoom3 from "../asset/images/card_items_details_images/wash_room_white
 import WashRoom4 from "../asset/images/card_items_details_images/washroom4.jpeg"
 import ContianerHome1 from "../asset/images/card_items_details_images/container_home1.jpeg"
 import ContainerHome2 from "../asset/images/card_items_details_images/container_home2.jpeg"
+import ContinerHome3 from "../asset/images/card_items_details_images/containerhome3.jpeg"
+import ContainerHome4 from "../asset/images/card_items_details_images/containerhome.jpg"
 import WashRoomVideo1 from "../asset/video/wash_room.mp4"
 import WashRoomVideo2 from "../asset/video/wash_room2.mp4"
 
@@ -24,7 +26,7 @@ import WashRoomVideo2 from "../asset/video/wash_room2.mp4"
 
 const cardData = [
   {
-    title: "Mobile Bistro",
+    title: "Container Cafes",
     description: "A fully-equipped container restaurant solution designed for easy setup and relocation. Perfect for construction sites, pop-up events, and outdoor locations, providing a modern and eco-friendly dining experience.",
     image: cafeImage,
     images: [
@@ -34,7 +36,7 @@ const cardData = [
       ResturantImage4 
     ],
     link: "/details",
-    slug: "container-bistro",
+    slug: "container-cafes",
     advantages: [
       "Quick and easy setup, ideal for short-term and pop-up installations.",
       "Portable and designed for seamless transportation to various locations.",
@@ -71,6 +73,8 @@ const cardData = [
     images: [
       ContianerHome1,
       ContainerHome2,
+      ContinerHome3,
+      ContainerHome4,
       containerHomeImage,
     ],
     link: "/details",
