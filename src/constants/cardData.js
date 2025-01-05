@@ -19,8 +19,14 @@ import ContianerHome1 from "../asset/images/card_items_details_images/container_
 import ContainerHome2 from "../asset/images/card_items_details_images/container_home2.jpeg"
 import ContinerHome3 from "../asset/images/card_items_details_images/containerhome3.jpeg"
 import ContainerHome4 from "../asset/images/card_items_details_images/containerhome.jpg"
+import PrefabCottage from "../asset/images/Cards_images/prefab_cottage.png"
+import prefabCottage1 from "../asset/images/card_items_details_images/prfabcottagestructure.png"
+import prefabCottage2 from "../asset/images/card_items_details_images/prfabcottage2.png"
+import prefabCottage3 from "../asset/images/card_items_details_images/prfabcottagewhitebrown.png"
 import WashRoomVideo1 from "../asset/video/wash_room.mp4"
 import WashRoomVideo2 from "../asset/video/wash_room2.mp4"
+
+
 
 
 
@@ -46,6 +52,26 @@ const cardData = [
       "Customizable interior to fit specific themes or operational requirements."
     ]
   },
+  {
+    title: "Prefab Cottages",
+    description: "A customizable prefab cottage solution designed for rapid installation and versatile usage. Ideal for vacation homes, retreats, or off-grid living, offering a blend of comfort, durability, and sustainability.",
+    image: PrefabCottage,
+    images: [
+      prefabCottage1,
+      prefabCottage2,
+      prefabCottage3 
+    ],
+    link: "/details",
+    slug: "prefab-cottages",
+    advantages: [
+      "Quick and efficient assembly, perfect for remote locations or urgent housing needs.",
+      "Portable and easy to relocate as per your requirements.",
+      "Constructed with high-quality, weather-resistant materials for longevity.",
+      "Eco-friendly design utilizing sustainable and energy-efficient practices.",
+      "Minimal onsite construction required, reducing time and labor costs.",
+      "Fully customizable interiors to cater to specific needs and aesthetic preferences."
+    ]
+  },  
   {
     title: "Portable Toilets",
     description: "A practical and mobile sanitation solution designed for outdoor events, construction sites, and temporary setups. These portable toilets prioritize hygiene, convenience, and ease of use in any setting.",
