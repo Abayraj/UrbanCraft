@@ -110,6 +110,8 @@ nav {
 
   .nav-links-container-open {
     display: flex; /* Show navigation links when menu is open */
+    background: black;
+    border-top: 2px solid white;
   }
 
   .hamburger-menu {
