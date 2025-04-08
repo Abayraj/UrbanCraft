@@ -121,8 +121,7 @@
 
 @media only screen and (max-width: 425px) {
     .header-wrapper-second-section h2 {
-        font-size: 3rem;
-        width: 100%;
+        font-size: 2.8rem;
     }
 
     .header-wrapper-second-section p {
