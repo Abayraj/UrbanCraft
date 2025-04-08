@@ -77,13 +77,13 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Media query for small screens */
-@media (max-width: 426px) {
+
+@media (max-width: 425px) {
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Use 100% instead of 100vw */
+    width: 100%;
     top: 0;
   }
 
