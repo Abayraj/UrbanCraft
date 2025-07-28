@@ -82,7 +82,7 @@ const AdvantageSection = () => {
                         />
                     </div>
                     <div className="adv-text">
-                        <h2>Guaranteed Quality</h2>
+                        <h2>Guaranteed - Quality</h2>
                         <p>"With expert precision and attention to detail<br/>our workers ensure that every project is completed to the highest quality standards."</p>
                     </div>
                 </div>
