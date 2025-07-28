@@ -61,7 +61,7 @@ const AdvantageSection = () => {
                         />
                     </div>
                     <div className="adv-text">
-                        <h2>Professional Workers</h2>
+                        <h2>Professional-Workers</h2>
                         <p>"Our team of highly trained professionals combines years of experience with a commitment to delivering top-tier results every time."</p>
                     </div>
                 </div>
