@@ -1,5 +1,5 @@
 import React from "react";
-import "./AdvantageSection.css"
+import "./AdvantageSections.css"
 import FirstImage from "/src/asset/images/Advantage_section_cards_img/engineering.svg"
 import SecondImage from "/src/asset/images/Advantage_section_cards_img/star.svg"
 import ThirdImage from "/src/asset/images/Advantage_section_cards_img/home.svg"

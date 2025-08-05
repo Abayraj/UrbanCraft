@@ -62,6 +62,7 @@
 }
 .adv-text p{
     font-size: 0.9rem;
+    color: black;
 }
 
 @media only screen and (max-width:426px){
